@@ -1,0 +1,28 @@
+{
+  "name": "config",
+  "version": "1.0.0",
+  "description": "config server",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "config",
+    "yaml"
+  ],
+  "author": "liyong3@asiainfo.com",
+  "license": "ISC",
+  "dependencies": {
+    "chokidar": "^2.1.2",
+    "debug": "^4.1.1",
+    "js-yaml": "^3.13.1",
+    "koa": "^2.7.0",
+    "koa-body": "^2.5.0",
+    "shelljs": "^0.8.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  }
+}
