@@ -32,7 +32,6 @@ app.use(async (ctx, next) => {
     ...ctx.request.body,
     ...ctx.query,
   };
-  console.log(Object.keys(configMap));
   ctx.body = {
     respCode: 0,
     respDesc: '',
