@@ -3,7 +3,7 @@ const YAML = require('js-yaml');
 const fs = require('fs');
 const join = require('path').join;
 const marked = require('marked');
-
+const json5 = require('json5');
 
 const markedOptions = ({
   renderer: new marked.Renderer(),
@@ -32,7 +32,7 @@ chokidar
   .on('all', (event, path) => {
     // console.log(event, path);
     const requirePath = configDir + path;
-    const match = path.match(/^(.+)\.(yml|md)$/);
+    const match = path.match(/^(.+)\.(yml|yaml|md|markdown|json5)$/);
     if (!match) return;
     const configName = `/${match[1]}`;
     if (configName.endsWith('README')) return;
@@ -72,6 +72,9 @@ chokidar
               }, {}));
               return data;
             })();
+            break;
+          case 'json5':
+            registry[configName] = json5.parse(text);
             break;
           default:
         }
