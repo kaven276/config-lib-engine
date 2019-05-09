@@ -56,10 +56,18 @@ chokidar
           case 'markdown':
             registry[configName] = (() => {
               const tokens = lexer.lex(text);
+              // console.log(tokens);
               const table = tokens.filter(item => item.type === 'table')[0];
-              const header = table.header;
+              const header = table.header.map((v) => {
+                const vv = v.split(':');
+                return {
+                  key: vv[0],
+                  type: vv[1],
+                };
+              });
               const data = table.cells.map(row => row.reduce((obj, col, idx) => {
-                obj[header[idx]] = col;
+                const hc = header[idx];
+                obj[hc.key] = (hc.type && hc.type.startsWith('num')) ? Number(col) : col;
                 return obj;
               }, {}));
               return data;

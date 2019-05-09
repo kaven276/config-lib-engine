@@ -1,7 +1,7 @@
 
 # 这里面配置全部产品价格信息
 
-productId | productName | price
+productId | productName | price:num
 ----------|----------|------
 101 | 尊享红1 | 100
 102 | 尊享红2 | 200

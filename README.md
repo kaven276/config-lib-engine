@@ -11,3 +11,11 @@
 * yaml/yml
 * md/markdown
 * csv,tsv
+
+markdown 配置
+--------------
+* 可以随意些其他文档，直接忽略
+* 支持 table 写法
+* 取第一个 table 作为数据源
+* table 表头作为每条记录的字段 key
+* table 表头支持 name:num 方式，将字符串转换成数字返回
