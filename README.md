@@ -10,7 +10,7 @@
 ----------------
 * yaml/yml
 * md/markdown
-* json5
+* json,json5
 * csv,tsv
 
 markdown 配置

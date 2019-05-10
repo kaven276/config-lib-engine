@@ -32,7 +32,7 @@ chokidar
   .on('all', (event, path) => {
     // console.log(event, path);
     const requirePath = configDir + path;
-    const match = path.match(/^(.+)\.(yml|yaml|md|markdown|json5)$/);
+    const match = path.match(/^(.+)\.(yml|yaml|md|markdown|json|json5)$/);
     if (!match) return;
     const configName = `/${match[1]}`;
     if (configName.endsWith('README')) return;
@@ -72,6 +72,9 @@ chokidar
               }, {}));
               return data;
             })();
+            break;
+          case 'json':
+            registry[configName] = JSON.parse(text);
             break;
           case 'json5':
             registry[configName] = json5.parse(text);
