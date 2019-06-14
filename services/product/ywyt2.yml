@@ -1,5 +1,5 @@
-- ywyt2ProductId:
-  menuId: group-broadband
+- ywyt2ProductId: '2019051401'
+  menuId: 'group-broadband'
   AD_SPEED:
     - fieldCode: '3'
       fieldText: 50M 2500元
@@ -7,7 +7,7 @@
       fieldText: 100M 7000元
     - fieldCode: '13'
       fieldText: 200M 12000元
-- ywyt2ProductId:
-  menuId: group-wohome
-  xxProductId: '30000241' 
+- ywyt2ProductId: '2019051402'
+  menuId: 'group-wohome'
+  xxProductId: '30000241'
   xxProductName: '[政企]智慧沃企-创业红68元'
