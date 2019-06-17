@@ -17,7 +17,6 @@ const markedOptions = ({
   xhtml: false,
 });
 
-const lexer = new marked.Lexer(markedOptions);
 const registry = {}; // form configs registry
 const configDir = join(__dirname, '../services/');
 
@@ -55,6 +54,7 @@ chokidar
           case 'md':
           case 'markdown':
             registry[configName] = (() => {
+              const lexer = new marked.Lexer(markedOptions);
               const tokens = lexer.lex(text);
               // console.log(tokens);
               const table = tokens.filter(item => item.type === 'table')[0];
