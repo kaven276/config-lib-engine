@@ -32,10 +32,24 @@ app.use(async (ctx, next) => {
     ...ctx.request.body,
     ...ctx.query,
   };
+  const req = ctx.state.req;
+  const stdConfig = configMap[ctx.path];
+  let result;
+  if (stdConfig instanceof Array) {
+    result = stdConfig.filter((row) => {
+      let hit = true;
+      Object.keys(req).forEach((key) => {
+        if (row[key] != req[key]) hit = false;
+      });
+      return hit;
+    });
+  } else {
+    result = stdConfig;
+  }
   ctx.body = {
     respCode: 0,
     respDesc: '',
-    data: configMap[ctx.path],
+    data: result,
   };
   await next();
 });
