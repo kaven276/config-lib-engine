@@ -1,0 +1,2 @@
+isForceRwx: 0 # 是否强制任沃行登录
+isForceSmsPassword: 0 # 是否强制工号密码加短信验证
