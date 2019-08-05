@@ -1,0 +1,528 @@
+
+[{
+  productId: '00000', // 产品id（随意）
+  productName: 'P30', // 产品名称
+  productBrand: 'huawei', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格（随意）
+  productTypeName:'手机', //产品类型
+},
+{
+  productId: '00000', // 产品id
+  productName: 'P30', // 产品名称
+  productBrand: 'huawei', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+  productTypeName:'手机', //产品类型
+},
+{
+  productId: '00001', // 产品id
+  productName: '畅享7S', // 产品名称
+  productBrand: 'huawei', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00002', // 产品id
+  productName: '畅享8', // 产品名称
+  productBrand: 'huawei', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00003', // 产品id
+  productName: '畅享8Plus', // 产品名称
+  productBrand: 'huawei', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00004', // 产品id
+  productName: '畅享8e', // 产品名称
+  productBrand: 'huawei', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00005', // 产品id
+  productName: '畅享8e', // 产品名称
+  productBrand: 'huawei', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00006', // 产品id
+  productName: '畅享8e青春版', // 产品名称
+  productBrand: 'huawei', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00007', // 产品id
+  productName: '畅享8e青春版16G', // 产品名称
+  productBrand: 'huawei', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00008', // 产品id
+  productName: '畅享9', // 产品名称
+  productBrand: 'huawei', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00009', // 产品id
+  productName: '畅享9Plus', // 产品名称
+  productBrand: 'huawei', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00010', // 产品id
+  productName: '畅享平板', // 产品名称
+  productBrand: 'huawei', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00011', // 产品id
+  productName: '畅享MAX', // 产品名称
+  productBrand: 'huawei', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00012', // 产品id
+  productName: 'Mate20', // 产品名称
+  productBrand: 'huawei', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00013', // 产品id
+  productName: 'Mate20Pro', // 产品名称
+  productBrand: 'huawei', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00014', // 产品id
+  productName: 'Mate20X', // 产品名称
+  productBrand: 'huawei', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00015', // 产品id
+  productName: 'Nova 3e', // 产品名称
+  productBrand: 'huawei', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00016', // 产品id
+  productName: 'Nova 3i', // 产品名称
+  productBrand: 'huawei', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00017', // 产品id
+  productName: 'Nova 3', // 产品名称
+  productBrand: 'huawei', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00018', // 产品id
+  productName: 'Nova 4', // 产品名称
+  productBrand: 'huawei', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00019', // 产品id
+  productName: 'P20', // 产品名称
+  productBrand: 'huawei', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00020', // 产品id
+  productName: 'P20 Pro', // 产品名称
+  productBrand: 'huawei', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00020', // 产品id
+  productName: 'P20 Pro', // 产品名称
+  productBrand: 'huawei', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00021', // 产品id
+  productName: 'X', // 产品名称
+  productBrand: 'iPhone', // 产品品牌
+  productBrandCN: '苹果', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00022', // 产品id
+  productName: 'XR', // 产品名称
+  productBrand: 'iPhone', // 产品品牌
+  productBrandCN: '苹果', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00023', // 产品id
+  productName: 'Xs', // 产品名称
+  productBrand: 'iPhone', // 产品品牌
+  productBrandCN: '苹果', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00024', // 产品id
+  productName: 'Xs Max', // 产品名称
+  productBrand: 'iPhone', // 产品品牌
+  productBrandCN: '苹果', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00055', // 产品id
+  productName: 'RENO', // 产品名称
+  productBrand: 'OPPO', // 产品品牌
+  productBrandCN: 'OPPO', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00025', // 产品id
+  productName: 'A3', // 产品名称
+  productBrand: 'OPPO', // 产品品牌
+  productBrandCN: 'OPPO', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00026', // 产品id
+  productName: 'A5', // 产品名称
+  productBrand: 'OPPO', // 产品品牌
+  productBrandCN: 'OPPO', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00027', // 产品id
+  productName: 'A7x', // 产品名称
+  productBrand: 'OPPO', // 产品品牌
+  productBrandCN: 'OPPO', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00028', // 产品id
+  productName: 'FindX', // 产品名称
+  productBrand: 'OPPO', // 产品品牌
+  productBrandCN: 'OPPO', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00029', // 产品id
+  productName: 'R11', // 产品名称
+  productBrand: 'OPPO', // 产品品牌
+  productBrandCN: 'OPPO', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00030', // 产品id
+  productName: 'R11 Plus', // 产品名称
+  productBrand: 'OPPO', // 产品品牌
+  productBrandCN: 'OPPO', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00031', // 产品id
+  productName: 'R11s', // 产品名称
+  productBrand: 'OPPO', // 产品品牌
+  productBrandCN: 'OPPO', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00032', // 产品id
+  productName: 'R11s Plus', // 产品名称
+  productBrand: 'OPPO', // 产品品牌
+  productBrandCN: 'OPPO', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00033', // 产品id
+  productName: 'R15', // 产品名称
+  productBrand: 'OPPO', // 产品品牌
+  productBrandCN: 'OPPO', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00034', // 产品id
+  productName: 'R15x星云特别版', // 产品名称
+  productBrand: 'OPPO', // 产品品牌
+  productBrandCN: 'OPPO', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00035', // 产品id
+  productName: 'R15x', // 产品名称
+  productBrand: 'OPPO', // 产品品牌
+  productBrandCN: 'OPPO', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00036', // 产品id
+  productName: 'R17', // 产品名称
+  productBrand: 'OPPO', // 产品品牌
+  productBrandCN: 'OPPO', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00037', // 产品id
+  productName: 'R17 Pro', // 产品名称
+  productBrand: 'OPPO', // 产品品牌
+  productBrandCN: 'OPPO', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00038', // 产品id
+  productName: 'R17新年版', // 产品名称
+  productBrand: 'OPPO', // 产品品牌
+  productBrandCN: 'OPPO', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00039', // 产品id
+  productName: 'R17 Pro新年版', // 产品名称
+  productBrand: 'OPPO', // 产品品牌
+  productBrandCN: 'OPPO', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00041', // 产品id
+  productName: 'NEX', // 产品名称
+  productBrand: 'vivo', // 产品品牌
+  productBrandCN: 'vivo', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00042', // 产品id
+  productName: 'NEX A', // 产品名称
+  productBrand: 'vivo', // 产品品牌
+  productBrandCN: 'vivo', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00043', // 产品id
+  productName: 'NEX S', // 产品名称
+  productBrand: 'vivo', // 产品品牌
+  productBrandCN: 'vivo', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00044', // 产品id
+  productName: 'X23', // 产品名称
+  productBrand: 'vivo', // 产品品牌
+  productBrandCN: 'vivo', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00045', // 产品id
+  productName: 'X23全息幻彩版', // 产品名称
+  productBrand: 'vivo', // 产品品牌
+  productBrandCN: 'vivo', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00046', // 产品id
+  productName: 'X27', // 产品名称
+  productBrand: 'vivo', // 产品品牌
+  productBrandCN: 'vivo', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00047', // 产品id
+  productName: 'Y81', // 产品名称
+  productBrand: 'vivo', // 产品品牌
+  productBrandCN: 'vivo', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00048', // 产品id
+  productName: 'Y81s', // 产品名称
+  productBrand: 'vivo', // 产品品牌
+  productBrandCN: 'vivo', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00049', // 产品id
+  productName: 'Y93', // 产品名称
+  productBrand: 'vivo', // 产品品牌
+  productBrandCN: 'vivo', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00050', // 产品id
+  productName: 'Y93S', // 产品名称
+  productBrand: 'vivo', // 产品品牌
+  productBrandCN: 'vivo', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00051', // 产品id
+  productName: 'Y97', // 产品名称
+  productBrand: 'vivo', // 产品品牌
+  productBrandCN: 'vivo', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00052', // 产品id
+  productName: 'Z1', // 产品名称
+  productBrand: 'vivo', // 产品品牌
+  productBrandCN: 'vivo', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00053', // 产品id
+  productName: 'Z1i', // 产品名称
+  productBrand: 'vivo', // 产品品牌
+  productBrandCN: 'vivo', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00054', // 产品id
+  productName: 'TV50', // 产品名称
+  productBrand: 'Hisense', // 产品品牌
+  productBrandCN: 'Hisense', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00056', // 产品id
+  productName: '阿巴町电话手表', // 产品名称
+  productBrand: '阿巴町', // 产品品牌
+  productBrandCN: '阿巴町', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00057', // 产品id
+  productName: 'TicWatch Pro', // 产品名称
+  productBrand: 'TicWatch', // 产品品牌
+  productBrandCN: 'TicWatch', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00058', // 产品id
+  productName: '译呗', // 产品名称
+  productBrand: '科大讯飞', // 产品品牌
+  productBrandCN: '科大讯飞', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00058', // 产品id
+  productName: '43', // 产品名称
+  productBrand: '海信电视', // 产品品牌
+  productBrandCN: '海信电视', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00059', // 产品id
+  productName: '50', // 产品名称
+  productBrand: '海信电视', // 产品品牌
+  productBrandCN: '海信电视', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00060', // 产品id
+  productName: '55', // 产品名称
+  productBrand: '海信电视', // 产品品牌
+  productBrandCN: '海信电视', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00061', // 产品id
+  productName: '60', // 产品名称
+  productBrand: '海信电视', // 产品品牌
+  productBrandCN: '海信电视', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00062', // 产品id
+  productName: 'AI音箱', // 产品名称
+  productBrand: '华为', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00063', // 产品id
+  productName: 'WATCH 2 Pro', // 产品名称
+  productBrand: 'HUAWEI', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00064', // 产品id
+  productName: '净水器', // 产品名称
+  productBrand: '浩泽', // 产品品牌
+  productBrandCN: '浩泽', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00065', // 产品id
+  productName: '咪鼠智能语音鼠标', // 产品名称
+  productBrand: '科大讯飞', // 产品品牌
+  productBrandCN: '科大讯飞', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00066', // 产品id
+  productName: '门锁', // 产品名称
+  productBrand: '科裕', // 产品品牌
+  productBrandCN: '科裕', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00066', // 产品id
+  productName: '酷博士机器人', // 产品名称
+  productBrand: '酷博士', // 产品品牌
+  productBrandCN: '酷博士', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00067', // 产品id
+  productName: '努比亚手表', // 产品名称
+  productBrand: '努比亚', // 产品品牌
+  productBrandCN: '努比亚', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00067', // 产品id
+  productName: '涂鸦智能AI音箱', // 产品名称
+  productBrand: 'Tuya Inc.', // 产品品牌
+  productBrandCN: 'Tuya Inc.', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00068', // 产品id
+  productName: '小度音箱', // 产品名称
+  productBrand: '百度', // 产品品牌
+  productBrandCN: '百度', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00068', // 产品id
+  productName: '1c', // 产品名称
+  productBrand: '小度音箱', // 产品品牌
+  productBrandCN: '小度音箱', // 产品品牌（中文）
+  price: '1', // 产品价格
+},
+{
+  productId: '00068', // 产品id
+  productName: '小天才电话手表', // 产品名称
+  productBrand: '小天才', // 产品品牌
+  productBrandCN: '小天才', // 产品品牌（中文）
+  price: '1', // 产品价格
+}]
