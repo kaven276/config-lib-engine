@@ -15,6 +15,18 @@ module.exports = {
       NODE_ENV: 'development',
       PORT: 3019,
     },
+    env_test: {
+      NODE_ENV: 'development',
+      ENV: 'test',
+    },
+    env_prod: {
+      NODE_ENV: 'production',
+      ENV: 'prod',
+    },
+    env_stage: {
+      NODE_ENV: 'development',
+      ENV: 'stage',
+    },
   },
   {
     name: 'config_stage',
@@ -32,5 +44,6 @@ module.exports = {
       NODE_ENV: 'development',
       PORT: 2019,
     },
-  }],
+  },
+  ],
 };
