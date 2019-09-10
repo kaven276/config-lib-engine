@@ -8,7 +8,7 @@ export ENV=$2
 rsync -av --delete  \
 --filter="- .git/" \
 --filter="- .node-version" \
---filter="- node_modules-" \
+--filter="- node_modules" \
 $SOURCE/ "${TARGET}:.nodeapp/${DIR}"
 
 ssh ${TARGET} <<eof
