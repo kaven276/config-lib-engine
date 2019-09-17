@@ -1,3 +1,3 @@
 isForceRwx: 0 # 是否强制任沃行登录
 isForceSmsPassword: 0 # 是否强制工号密码加短信验证
-digitsFor84: '0123' #对登录的window.navigator.userAgent的hash值进行计算后取值对比
+digitsFor84: '' #对登录的window.navigator.userAgent的hash值进行计算后取值对比
