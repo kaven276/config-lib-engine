@@ -1,5 +1,37 @@
 
 [{
+  productId: '00022', // 产品id
+  productName: '11', // 产品名称
+  productBrand: 'iPhone', // 产品品牌
+  productBrandCN: '苹果', // 产品品牌（中文）
+  price: '1', // 产品价格
+  productTypeName:'智能手机', //产品类型
+},
+{
+  productId: '00068', // 产品id
+  productName: '11Pro', // 产品名称
+  productBrand: 'iPhone', // 产品品牌
+  productBrandCN: '苹果', // 产品品牌（中文）
+  price: '1', // 产品价格
+  productTypeName:'智能手机', //产品类型
+},
+{
+  productId: '00068', // 产品id
+  productName: 'Nova 5i', // 产品名称
+  productBrand: 'huawei', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+  productTypeName:'智能手机', //产品类型
+},
+{
+  productId: '00068', // 产品id
+  productName: 'Mate30Pro', // 产品名称
+  productBrand: 'huawei', // 产品品牌
+  productBrandCN: '华为', // 产品品牌（中文）
+  price: '1', // 产品价格
+  productTypeName:'智能手机', //产品类型
+},
+{
   productId: '00000', // 产品id（随意）
   productName: 'P30', // 产品名称
   productBrand: 'huawei', // 产品品牌
@@ -599,36 +631,4 @@
   productBrandCN: '小天才', // 产品品牌（中文）
   price: '1', // 产品价格
   productTypeName:'智能手表', //产品类型
-},
-{
-  productId: '00022', // 产品id
-  productName: '11', // 产品名称
-  productBrand: 'iPhone', // 产品品牌
-  productBrandCN: '苹果', // 产品品牌（中文）
-  price: '1', // 产品价格
-  productTypeName:'智能手机', //产品类型
-},
-{
-  productId: '00068', // 产品id
-  productName: '11Pro', // 产品名称
-  productBrand: 'iPhone', // 产品品牌
-  productBrandCN: '苹果', // 产品品牌（中文）
-  price: '1', // 产品价格
-  productTypeName:'智能手机', //产品类型
-},
-{
-  productId: '00068', // 产品id
-  productName: 'Nova 5i', // 产品名称
-  productBrand: 'huawei', // 产品品牌
-  productBrandCN: '华为', // 产品品牌（中文）
-  price: '1', // 产品价格
-  productTypeName:'智能手机', //产品类型
-},
-{
-  productId: '00068', // 产品id
-  productName: 'Mate30Pro', // 产品名称
-  productBrand: 'huawei', // 产品品牌
-  productBrandCN: '华为', // 产品品牌（中文）
-  price: '1', // 产品价格
-  productTypeName:'智能手机', //产品类型
 }]
