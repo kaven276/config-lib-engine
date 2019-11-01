@@ -1,4 +1,4 @@
-# 承诺抵消产品清单
+# 承诺抵消产品清单 /ms/config/product/promiseLowList
 
 PRODUCT_ID | PRODUCT_NUMBER  | TYPE
 ----------- | ---------------- | ---------
