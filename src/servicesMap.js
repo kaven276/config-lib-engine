@@ -89,6 +89,26 @@ function processConfigModule(event, purePath, data) {
   registry[`/${purePath}`] = data;
 }
 
+function loadMarkdown(text) {
+  const lexer = new marked.Lexer(markedOptions);
+  const tokens = lexer.lex(text);
+  // console.log(tokens);
+  const table = tokens.filter(item => item.type === 'table')[0];
+  const header = table.header.map((v) => {
+    const vv = v.split(':');
+    return {
+      key: vv[0],
+      type: vv[1],
+    };
+  });
+  const data = table.cells.map(row => row.reduce((obj, col, idx) => {
+    const hc = header[idx];
+    obj[hc.key] = (hc.type && hc.type.startsWith('num')) ? Number(col) : col;
+    return obj;
+  }, {}));
+  return data;
+}
+
 chokidar
   .watch(configDir, {
     cwd: configDir,
@@ -108,7 +128,6 @@ chokidar
     const suffix = match[2];
     // console.log(configName, suffix);
     let text;
-    let productConfig;
     switch (event) {
       case 'add': // 发现新配置文件
       case 'change': // 发现配置文件变化
@@ -118,31 +137,11 @@ chokidar
         switch (suffix) {
           case 'yml':
           case 'yaml':
-            productConfig = YAML.load(text);
-            processConfigModule(event, pathPure, productConfig);
+            processConfigModule(event, pathPure, YAML.load(text));
             break;
           case 'md':
           case 'markdown':
-            productConfig = (() => {
-              const lexer = new marked.Lexer(markedOptions);
-              const tokens = lexer.lex(text);
-              // console.log(tokens);
-              const table = tokens.filter(item => item.type === 'table')[0];
-              const header = table.header.map((v) => {
-                const vv = v.split(':');
-                return {
-                  key: vv[0],
-                  type: vv[1],
-                };
-              });
-              const data = table.cells.map(row => row.reduce((obj, col, idx) => {
-                const hc = header[idx];
-                obj[hc.key] = (hc.type && hc.type.startsWith('num')) ? Number(col) : col;
-                return obj;
-              }, {}));
-              return data;
-            })();
-            processConfigModule(event, pathPure, productConfig);
+            processConfigModule(event, pathPure, loadMarkdown(text));
             break;
           case 'json':
             processConfigModule(event, pathPure, JSON.parse(text));
