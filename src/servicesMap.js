@@ -41,6 +41,8 @@ function processDir(event, path) {
   dirConfig.subMap = {};
   dirMap.set(path, dirConfig);
   registry[`/${path}/`] = dirConfig;
+  // eslint-disable-next-line no-use-before-define
+  processDirConfig('addWithDir', `${path}/config.js`);
   return true;
 }
 
@@ -62,11 +64,13 @@ function processDirConfig(event, path) {
     }
   }
   let newConfig;
-  if (event === 'change' || event === 'add') {
+  if (event === 'change' || event === 'add' || event === 'addWithDir') {
     try {
       newConfig = require(requirePath);
     } catch (e) {
-      console.error('module change load/hot-reload error', path, e);
+      if (event !== 'addWithDir') {
+        console.error('module change load/hot-reload error', path, e);
+      }
     }
     Object.assign(dirConfig, newConfig); // update dirConfig
   }
@@ -87,6 +91,17 @@ function processConfigModule(event, purePath, data) {
     upDirSubMap[fileName] = data;
   }
   registry[`/${purePath}`] = data;
+  // validation
+  if (upDirConfig && upDirConfig.validator) {
+    try {
+      upDirConfig.validator(fileName, data)();
+    } catch (e) {
+      console.error(`validate failed for /${purePath}`);
+      console.error(JSON.stringify(e, null, 2));
+      // console.error(e);
+      // throw new Error();
+    }
+  }
 }
 
 function loadMarkdown(text) {
