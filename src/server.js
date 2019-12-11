@@ -33,13 +33,13 @@ app.use(async (ctx, next) => {
     ...ctx.query,
   };
   const req = ctx.state.req;
-  const stdConfig = configMap[ctx.path];
+  const stdConfig = ctx.path.endsWith('/') ? configMap[ctx.path].index() : configMap[ctx.path];
   let result;
   if (stdConfig instanceof Array) {
     result = stdConfig.filter((row) => {
       let hit = true;
       Object.keys(req).forEach((key) => {
-        if (row[key] != req[key]) hit = false;
+        if (row[key] !== req[key]) hit = false;
       });
       return hit;
     });

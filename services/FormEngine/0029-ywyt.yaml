@@ -1,0 +1,117 @@
+---
+  itemList:
+  - defaultFieldCode: ''
+    readonly: 0
+    itemCode: OPERATOR_EMAIL
+    toTable: 0
+    inputType: email
+    defaultText: ''
+    optional: 0
+    itemLabel: 经办人邮箱：
+  - defaultFieldCode: ''
+    readonly: 0
+    itemCode: MANAGER_EMAIL
+    toTable: 0
+    inputType: email
+    defaultText: ''
+    optional: 0
+    itemLabel: 客户经理邮箱：
+  - defaultFieldCode: ''
+    readonly: 1
+    itemCode: MAIN_PRODUCT_SELECT
+    optionList:
+    - fieldCode: '01'
+      fieldText: 云资源
+    - fieldCode: '02'
+      fieldText: 微信发票
+    - fieldCode: '03'
+      fieldText: 云OA
+    - fieldCode: '04'
+      fieldText: 党建云
+    - fieldCode: '05'
+      fieldText: 财务云
+    - fieldCode: '06'
+      fieldText: 微信小程序
+    toTable: 0
+    inputType: select
+    defaultText: ''
+    optional: 0
+    itemLabel: 主产品选择：
+  - defaultFieldCode: ''
+    readonly: 1
+    itemCode: PRODUCT_SELECT
+    optionList:
+    - fieldCode: '011'
+      fieldText: 沃云A
+    - fieldCode: '012'
+      fieldText: 沃云T
+    - fieldCode: '021'
+      fieldText: 标准版
+    - fieldCode: '022'
+      fieldText: 高级版
+    - fieldCode: '023'
+      fieldText: 其他-备注
+    - fieldCode: '031'
+      fieldText: 通达OA永久授权版-50用户
+    - fieldCode: '032'
+      fieldText: 其他-备注
+    - fieldCode: '041'
+      fieldText: 10人版
+    - fieldCode: '042'
+      fieldText: 20人版
+    - fieldCode: '043'
+      fieldText: 50人版
+    - fieldCode: '044'
+      fieldText: 100人版
+    - fieldCode: '045'
+      fieldText: 其他-备注
+    - fieldCode: '051'
+      fieldText: 好会计
+    - fieldCode: '052'
+      fieldText: 其他-备注
+    - fieldCode: '0601'
+      fieldText: 企业展示
+    - fieldCode: '0602'
+      fieldText: 电商
+    - fieldCode: '0603'
+      fieldText: 餐饮
+    - fieldCode: '0604'
+      fieldText: 党建标准版
+    - fieldCode: '0605'
+      fieldText: 物业
+    - fieldCode: '0606'
+      fieldText: 房地产
+    - fieldCode: '0607'
+      fieldText: 装修
+    - fieldCode: '0608'
+      fieldText: 酒店
+    - fieldCode: '0609'
+      fieldText: 驾校
+    - fieldCode: '0610'
+      fieldText: 其他-备注
+    toTable: 0
+    inputType: select
+    defaultText: ''
+    optional: 0
+    itemLabel: 主产品选择：
+  - defaultFieldCode: ''
+    readonly: 1
+    itemCode: FEE_AUTOMATICAL
+    optionList:
+    - fieldCode: '1'
+      fieldText: 否
+    - fieldCode: '2'
+      fieldText: 是
+    toTable: 0
+    inputType: select
+    defaultText: ''
+    optional: 0
+    itemLabel: 是否自动续费：
+  - defaultFieldCode: ''
+    readonly: 0
+    itemCode: REMARK
+    toTable: 0
+    inputType: textarea
+    defaultText: ''
+    optional: 1
+    itemLabel: 备注信息：
