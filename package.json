@@ -1,5 +1,5 @@
 {
-  "name": "config",
+  "name": "config-lib",
   "version": "1.0.0",
   "description": "config server",
   "main": "src/server.js",
