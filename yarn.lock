@@ -1960,6 +1960,14 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.npm.taobao.org/strip-json-comments/download/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
+superstruct@^0.8.2:
+  version "0.8.2"
+  resolved "https://registry.npm.taobao.org/superstruct/download/superstruct-0.8.2.tgz#63d2937b0e24210535ad47d3fd67b474e99bff52"
+  integrity sha1-Y9KTew4kIQU1rUfT/We0dOmb/1I=
+  dependencies:
+    kind-of "^6.0.2"
+    tiny-invariant "^1.0.6"
+
 supports-color@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npm.taobao.org/supports-color/download/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
@@ -2000,6 +2008,11 @@ text-table@~0.2.0:
 through@^2.3.6:
   version "2.3.8"
   resolved "https://registry.npm.taobao.org/through/download/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
+
+tiny-invariant@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.npm.taobao.org/tiny-invariant/download/tiny-invariant-1.0.6.tgz#b3f9b38835e36a41c843a3b0907a5a7b3755de73"
+  integrity sha1-s/mziDXjakHIQ6OwkHpaezdV3nM=
 
 tmp@^0.0.33:
   version "0.0.33"
