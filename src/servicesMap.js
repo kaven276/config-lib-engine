@@ -94,11 +94,11 @@ function processConfigModule(event, purePath, data) {
   // validation
   if (upDirConfig && upDirConfig.validator) {
     try {
-      upDirConfig.validator(fileName, data)();
+      upDirConfig.validator(fileName, data)(data);
     } catch (e) {
       console.error(`validate failed for /${purePath}`);
-      console.error(JSON.stringify(e, null, 2));
-      // console.error(e);
+      // console.error(JSON.stringify(e, null, 2));
+      console.error(e);
       // throw new Error();
     }
   }
