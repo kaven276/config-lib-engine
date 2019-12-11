@@ -38,6 +38,3 @@ const configValicator = struct.interface({
 exports.validator = (filename, config) => configValicator;
 //  configValidator(productConfig);
 
-exports.index = () => ({
-  key: 'all form configs 123',
-});

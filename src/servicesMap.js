@@ -22,7 +22,7 @@ const registry = {}; // form configs registry
 const configDir = join(__dirname, '../services/');
 
 function defaultIndex() {
-  return { ...this.subMap };
+  return this.subMap;
 }
 
 // load dir module first, the dir/config.js will replace dir module
@@ -38,7 +38,7 @@ function processDir(event, path) {
     const upDirConfig = dirMap.get(upPath);
     dirConfig = Object.create(upDirConfig);
   }
-  dirConfig.subMap = new Map();
+  dirConfig.subMap = {};
   dirMap.set(path, dirConfig);
   registry[`/${path}/`] = dirConfig;
   return true;
@@ -82,9 +82,9 @@ function processConfigModule(event, purePath, data) {
   const upDirConfig = dirMap.get(upPath);
   const upDirSubMap = upDirConfig.subMap;
   if (event === 'unlink') {
-    upDirSubMap.remove(fileName);
+    delete upDirSubMap[fileName];
   } else {
-    upDirSubMap.set(fileName, data);
+    upDirSubMap[fileName] = data;
   }
   registry[`/${purePath}`] = data;
 }
