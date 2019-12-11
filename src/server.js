@@ -33,7 +33,7 @@ app.use(async (ctx, next) => {
     ...ctx.query,
   };
   const req = ctx.state.req;
-  const stdConfig = ctx.path.endsWith('/') ? configMap[ctx.path].index() : configMap[ctx.path];
+  const stdConfig = ctx.path.endsWith('/') ? configMap[ctx.path].index(ctx.state.req) : configMap[ctx.path];
   let result;
   if (stdConfig instanceof Array) {
     result = stdConfig.filter((row) => {
