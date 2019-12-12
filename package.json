@@ -1,6 +1,6 @@
 {
-  "name": "config-lib",
-  "version": "1.0.0",
+  "name": "config-lib-engine",
+  "version": "0.0.1",
   "description": "config server",
   "main": "src/server.js",
   "scripts": {
