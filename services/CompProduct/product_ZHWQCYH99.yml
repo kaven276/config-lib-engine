@@ -1,0 +1,167 @@
+sysCode: CBS # 目前都是 CBS
+useCase: #菜单显示
+  - wohome
+  - wosale
+mixNetType: '8807' # 目标融合类型，调用aop融合成员预提交接口用到
+xxProductId: '30000237' # 行销商品标识，同意向单中的产品标识
+xxProductName: '[政企]智慧沃企-创业红99元' # 前台显示商品详细描述的文字138使用这个文件
+cbProductId: '90459498' # 提交集团接口 cb/aop 的产品标识
+allowFromProducts: #cbss融合可以转此融合
+  - '90396778'
+  - '90311214'
+members: # 配置包括主虚拟号在内的各类成员
+  - type: CP # 成员英文类别，行销专用
+    netTypeCode: 'CP' # 虚拟成员
+    min: 1
+    max: 1
+    bundleList: #新装纳入
+      - bundleId: '30000237'
+        bundleName: '[政企]智慧沃企-创业红99元'
+        allowAdd: 1 # 1：允许  0 ：不允许 融合成员纳入
+        allowNew: 1 # 1：允许  0 ：不允许 融合成员新装
+        products:
+        -
+          productId: '90459498'
+          productMode: '00'
+          packages: # 商品固定带的包元素组合
+            - packageId: '52062293'
+              elementId: '8493537'
+              elementType: D # D-资费 S-服务
+            - packageId: '52065797'
+              elementId: '41301660'
+              elementType: D # D-资费 S-服务
+            - packageId: '51977077'
+              elementId: '50027'
+              elementType:  S # D-资费 S-服务
+            - packageId: '51002268'
+              elementId: '50000'
+              elementType:  S # D-资费 S-服务
+  - type: mobile #手机成员
+    netTypeCode: '50'
+    min: 1
+    max: 5
+    aopHidePackages: 1 # 调用aop融合接口时，是否不传产品下的 packages 节点
+    bundleList: #新装纳入成员
+      - bundleId: '30000068'
+        bundleName: '智慧沃企手机成员（2018）新装'
+        allowAdd: 0 # 1：允许  0 ：不允许 融合成员纳入
+        allowNew: 1 # 1：允许  0 ：不允许 融合成员新装
+        products:
+          -
+            productId: '90414528'
+            productMode: '00'
+            packages: # 商品固定带的包元素组合
+              - packageId: '59999793'
+                elementId: '50000'
+                elementType: D # D-资费 S-服务
+              - packageId: '51018052'
+                elementId: '50004'
+                elementType: S # D-资费 S-服务
+          -
+            productId: '90393594'
+            productMode: '01'
+            close2g: 1
+            packages: # 商品固定带的包元素组合
+              - packageId: '52035855'
+                elementId: '50315'
+                elementType: S # D-资费 S-服务
+      - bundleId: '30000079'
+        bundleName: '智慧沃家手机成员（2018）纳入'
+        allowAdd: 1 # 1：允许  0 ：不允许 融合成员纳入
+        allowNew: 0 # 1：允许  0 ：不允许 融合成员新装
+        products:
+          -
+            productId: '90414528'
+            productMode: '00'
+            packages: # 商品固定带的包元素组合
+              - packageId: '59999793'
+                elementId: '50000'
+                elementType: D # D-资费 S-服务
+              - packageId: '51018052'
+                elementId: '50004'
+                elementType: S # D-资费 S-服务
+          -
+            productId: '90393594'
+            productMode: '01'
+            close2g: 1
+            packages: # 商品固定带的包元素组合
+              - packageId: '52035855'
+                elementId: '50315'
+                elementType: S # D-资费 S-服务
+  - type: broadband #宽带
+    netTypeCode: '40'
+    min: 1
+    max: 2
+    bundleList: #新装纳入
+      - bundleId: '30000070'
+        bundleName: '智慧沃企-创业红-宽带400M-50元/月'
+        speedLevel: '400' #宽带必填
+        allowAdd: 1 # 1：允许  0 ：不允许 融合成员纳入
+        allowNew: 1 # 1：允许  0 ：不允许 融合成员新装
+        products:
+        -
+          productId: '90569167'
+          productMode: '00'
+          packages: # 商品固定带的包元素组合
+            - packageId: '52213418'
+              elementId: '8844223'
+              elementType: D # D-资费 S-服务
+            - packageId: '51003173'
+              elementId: '40000'
+              elementType: S # D-资费 S-服务
+      - bundleId: '30000073'
+        bundleName: '智慧沃企融合套餐宽带加装200M-20元/月'
+        speedLevel: '200' #宽带必填
+        allowAdd: 1 # 1：允许  0 ：不允许 融合成员纳入
+        allowNew: 1 # 1：允许  0 ：不允许 融合成员新装
+        products:
+        -
+          productId: '90414961'
+          productMode: '00'
+          packages: # 商品固定带的包元素组合
+           - packageId: '52064574'
+             elementId: '8506475'
+             elementType: D # D-资费 S-服务
+           - packageId: '51003173'
+             elementId: '40000'
+             elementType: S # D-资费 S-服务
+  - type: fixed #固话
+    netTypeCode: '31'
+    min: 0
+    max: 1
+    bundleList: #新装纳入
+      - bundleId: '30000067'
+        bundleName: '智慧沃企融合套餐固话成员'
+        allowAdd: 1 # 1：允许  0 ：不允许 融合成员纳入
+        allowNew: 1 # 1：允许  0 ：不允许 融合成员新装
+        products:
+        -
+          productId: '90414533'
+          productMode: '00'
+          packages: # 商品固定带的包元素组合
+           - packageId: '51019292'
+             elementId: '30075'
+             elementType: S # D-资费 S-服务
+           - packageId: '51019292'
+             elementId: '7000530'
+             elementType: D # D-资费 S-服务
+  - type: IPTV #IPTV
+    netTypeCode: '49'
+    min: 0
+    max: 1
+    bundleList: #新装纳入
+      - bundleId: '30000069'
+        bundleName: '天津高清IPTV产品套餐'
+        allowAdd: 1 # 1：允许  0 ：不允许 融合成员纳入
+        allowNew: 1 # 1：允许  0 ：不允许 融合成员新装
+        products:
+        -
+          productId: '89003047'
+          productMode: '00'
+          packages: # 商品固定带的包元素组合
+           - packageId: '51003607'
+             elementId: '4013111'
+             elementType: S # D-资费 S-服务
+           - packageId: '51003607'
+             elementId: '7120584'
+             elementType: D # D-资费 S-服务
