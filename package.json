@@ -14,7 +14,7 @@
   "repository": "kaven276/config-lib-engine",
   "license": "ISC",
   "dependencies": {
-    "chokidar": "^2.1.2",
+    "chokidar": "^3.3.0",
     "debug": "^4.1.1",
     "js-yaml": "^3.13.1",
     "json5": "^2.1.0",
