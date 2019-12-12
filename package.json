@@ -11,6 +11,7 @@
     "yaml"
   ],
   "author": "liyong3@asiainfo.com",
+  "repository": "kaven276/config-lib-engine",
   "license": "ISC",
   "dependencies": {
     "chokidar": "^2.1.2",
