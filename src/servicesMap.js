@@ -126,6 +126,47 @@ function loadMarkdown(text) {
   return data;
 }
 
+function processConfigModuleTypes(event, path) {
+  const requirePath = configDir + path;
+  const match = path.match(/^(.+)\.(yml|yaml|md|markdown|json|json5)$/);
+  if (!match) return false;
+  if (match[1].endsWith('README')) return false;
+  const pathPure = match[1];
+  const suffix = match[2];
+  // console.log(configName, suffix);
+  let text;
+  switch (event) {
+    case 'add': // 发现新配置文件
+    case 'change': // 发现配置文件变化
+      text = fs.readFileSync(requirePath, {
+        encoding: 'utf8',
+      });
+      switch (suffix) {
+        case 'yml':
+        case 'yaml':
+          processConfigModule(event, pathPure, YAML.load(text));
+          break;
+        case 'md':
+        case 'markdown':
+          processConfigModule(event, pathPure, loadMarkdown(text));
+          break;
+        case 'json':
+          processConfigModule(event, pathPure, JSON.parse(text));
+          break;
+        case 'json5':
+          processConfigModule(event, pathPure, json5.parse(text));
+          break;
+        default:
+      }
+      break;
+    case 'unlink': // 删除配置文件则关闭对应的 pool
+      processConfigModule(event, pathPure);
+      break;
+    default:
+  }
+  return true;
+}
+
 chokidar
   .watch(configDir, {
     cwd: configDir,
@@ -137,43 +178,7 @@ chokidar
     // console.log(event, path);
     if (processDir(event, path)) return;
     if (processDirConfig(event, path)) return;
-    const requirePath = configDir + path;
-    const match = path.match(/^(.+)\.(yml|yaml|md|markdown|json|json5)$/);
-    if (!match) return;
-    if (match[1].endsWith('README')) return;
-    const pathPure = match[1];
-    const suffix = match[2];
-    // console.log(configName, suffix);
-    let text;
-    switch (event) {
-      case 'add': // 发现新配置文件
-      case 'change': // 发现配置文件变化
-        text = fs.readFileSync(requirePath, {
-          encoding: 'utf8',
-        });
-        switch (suffix) {
-          case 'yml':
-          case 'yaml':
-            processConfigModule(event, pathPure, YAML.load(text));
-            break;
-          case 'md':
-          case 'markdown':
-            processConfigModule(event, pathPure, loadMarkdown(text));
-            break;
-          case 'json':
-            processConfigModule(event, pathPure, JSON.parse(text));
-            break;
-          case 'json5':
-            processConfigModule(event, pathPure, json5.parse(text));
-            break;
-          default:
-        }
-        break;
-      case 'unlink': // 删除配置文件则关闭对应的 pool
-        processConfigModule(event, pathPure);
-        break;
-      default:
-    }
+    processConfigModuleTypes(event, path);
   });
 
 exports.configMap = registry;
