@@ -90,6 +90,7 @@ function processConfigModule(event, purePath, data) {
       // console.error(JSON.stringify(e, null, 2));
       console.error(e);
       // throw new Error();
+      process.exit(1);
     }
   }
 }
@@ -150,3 +151,10 @@ chokidar
   });
 
 exports.configMap = registry;
+
+// execute as npm test before git commit check
+if (module === require.main) {
+  setTimeout(() => {
+    process.exit(0);
+  }, 1500);
+}
