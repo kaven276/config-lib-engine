@@ -33,24 +33,35 @@ app.use(async (ctx, next) => {
     ...ctx.query,
   };
   const req = ctx.state.req;
-  const stdConfig = ctx.path.endsWith('/') ? configMap[ctx.path].index(ctx.state.req) : configMap[ctx.path];
-  let result;
-  if (stdConfig instanceof Array) {
-    result = stdConfig.filter((row) => {
-      let hit = true;
-      Object.keys(req).forEach((key) => {
-        if (row[key] !== req[key]) hit = false;
+  const m = configMap[ctx.path];
+
+  if (m) {
+    const stdConfig = ctx.path.endsWith('/') ? m.index(ctx.state.req) : m;
+    let result;
+    if (stdConfig instanceof Array) {
+      result = stdConfig.filter((row) => {
+        let hit = true;
+        Object.keys(req).forEach((key) => {
+          if (row[key] !== req[key]) hit = false;
+        });
+        return hit;
       });
-      return hit;
-    });
+    } else {
+      result = stdConfig;
+    }
+    ctx.body = {
+      respCode: 0,
+      respDesc: '',
+      data: result,
+    };
   } else {
-    result = stdConfig;
+    ctx.body = {
+      respCode: -1,
+      respDesc: `config ${ctx.path} not exists`,
+    };
   }
-  ctx.body = {
-    respCode: 0,
-    respDesc: '',
-    data: result,
-  };
+
+
   await next();
 });
 
