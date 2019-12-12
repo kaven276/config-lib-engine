@@ -67,7 +67,15 @@ function processDirConfig(event, path) {
   return true;
 }
 
-function processConfigModule(event, purePath, data) {
+function processConfigModule(event, path, purePath, parse, text) {
+  let data;
+  try {
+    data = parse(text);
+  } catch (e) {
+    console.error(`validate failed for /${path}`);
+    console.error(e);
+    process.exit(1);
+  }
   // get dirConfig
   // const upPath = path.substr(0, path.lastIndexOf('/'));
   const match = purePath.match((/^(.*?)(\/?)([^/]+)$/));
@@ -86,7 +94,7 @@ function processConfigModule(event, purePath, data) {
     try {
       upDirConfig.validator(fileName, data)(data);
     } catch (e) {
-      console.error(`validate failed for /${purePath}`);
+      console.error(`validate failed for /${path}`);
       // console.error(JSON.stringify(e, null, 2));
       console.error(e);
       // throw new Error();
@@ -113,17 +121,17 @@ function processConfigModuleTypes(event, path) {
       switch (suffix) {
         case 'yml':
         case 'yaml':
-          processConfigModule(event, pathPure, YAML.load(text));
+          processConfigModule(event, path, pathPure, YAML.load, text);
           break;
         case 'md':
         case 'markdown':
-          processConfigModule(event, pathPure, loadMarkdown(text));
+          processConfigModule(event, path, pathPure, loadMarkdown, text);
           break;
         case 'json':
-          processConfigModule(event, pathPure, JSON.parse(text));
+          processConfigModule(event, path, pathPure, JSON.parse, text);
           break;
         case 'json5':
-          processConfigModule(event, pathPure, json5.parse(text));
+          processConfigModule(event, path, pathPure, json5.parse, text);
           break;
         default:
       }
