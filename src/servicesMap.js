@@ -7,7 +7,7 @@ const json5 = require('json5');
 
 const dirMap = new Map();
 const registry = {}; // form configs registry
-const configDir = join(__dirname, '../services/');
+const configDir = process.env.CONFIG_DIR || join(__dirname, '../services/');
 
 // load dir module first, the dir/config.js will replace dir module
 function processDir(event, path) {
