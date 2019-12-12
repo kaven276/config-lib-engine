@@ -36,7 +36,7 @@ app.use(async (ctx, next) => {
   const m = configMap[ctx.path];
 
   if (m) {
-    const stdConfig = ctx.path.endsWith('/') ? m.index(ctx.state.req) : m;
+    const stdConfig = ctx.path.endsWith('/') ? m.index(m.subMap, ctx.state.req) : m;
     let result;
     if (stdConfig instanceof Array) {
       result = stdConfig.filter((row) => {

@@ -21,17 +21,13 @@ const dirMap = new Map();
 const registry = {}; // form configs registry
 const configDir = join(__dirname, '../services/');
 
-function defaultIndex() {
-  return this.subMap;
-}
-
 // load dir module first, the dir/config.js will replace dir module
 function processDir(event, path) {
   if (event !== 'addDir') return false;
   let dirConfig;
   if (path === '') {
     dirConfig = Object.create({ // root config.js inherit nothing or anything in future
-      index: defaultIndex,
+      index: subMap => subMap,
     });
   } else {
     const upPath = path.substr(0, path.lastIndexOf('/'));
