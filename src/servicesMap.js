@@ -38,7 +38,13 @@ function processDir(event, path) {
     const upDirConfig = dirMap.get(upPath);
     dirConfig = Object.create(upDirConfig);
   }
-  dirConfig.subMap = {};
+  Object.defineProperty(dirConfig, 'subMap', {
+    value: {},
+    configurable: false,
+    writable: false,
+    readable: true,
+    enumerable: false,
+  });
   dirMap.set(path, dirConfig);
   registry[`/${path}/`] = dirConfig;
   // eslint-disable-next-line no-use-before-define
