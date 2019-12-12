@@ -1,0 +1,995 @@
+---
+itemList:
+  - defaultFieldCode: ""
+    readonly: 1
+    itemCode: CUST_NAME
+    toTable: 0
+    inputType: text
+    defaultText: ""
+    optional: 0
+    itemLabel: "客户名称："
+  - defaultFieldCode: ""
+    readonly: 0
+    itemCode: CUST_CLASS_TYPE
+    optionList:
+      - fieldCode: "2"
+        fieldText: 中小企业客户
+      - fieldCode: "3"
+        fieldText: 大客户
+    toTable: 0
+    inputType: select
+    defaultText: "2"
+    optional: 0
+    itemLabel: "客户类型:"
+  - defaultFieldCode: ""
+    readonly: 0
+    itemCode: POST_ADDR
+    toTable: 0
+    inputType: text
+    defaultText: ""
+    optional: 0
+    itemLabel: "客户通讯地址："
+  - defaultFieldCode: ""
+    readonly: 0
+    itemCode: POST_CODE
+    toTable: 0
+    inputType: text
+    defaultText: ""
+    optional: 0
+    itemLabel: "邮政编码："
+  - defaultFieldCode: ""
+    readonly: 0
+    itemCode: CONTACT_NAME
+    toTable: 0
+    inputType: text
+    defaultText: ""
+    optional: 0
+    itemLabel: "联系人姓名："
+  - defaultFieldCode: ""
+    readonly: 0
+    itemCode: CONTACT_PHONE
+    toTable: 0
+    inputType: text
+    defaultText: ""
+    optional: 0
+    itemLabel: "联系人电话："
+  - defaultFieldCode: ""
+    readonly: 0
+    itemCode: CONTACT_EMAIL
+    toTable: 0
+    inputType: email
+    defaultText: ""
+    optional: 0
+    itemLabel: "联系人E-mail："
+  - defaultFieldCode: ""
+    readonly: 0
+    itemCode: FIRST_CALLING_TYPE_CODE
+    optionList:
+      - fieldCode: '01'
+        fieldText: 金融业
+      - fieldCode: '02'
+        fieldText: 党政军部门
+      - fieldCode: '03'
+        fieldText: 科学、教育、文化体育、卫生、出版业
+      - fieldCode: '04'
+        fieldText: 旅游、饭店、娱乐服务业
+      - fieldCode: '05'
+        fieldText: 采掘业和加工、制造业
+      - fieldCode: '06'
+        fieldText: 公共服务业
+      - fieldCode: '07'
+        fieldText: 交通运输、仓储和邮政业
+      - fieldCode: '08'
+        fieldText: 批发、零售业
+      - fieldCode: '09'
+        fieldText: 房地产业
+      - fieldCode: '10'
+        fieldText: 建筑业
+      - fieldCode: '11'
+        fieldText: 计算机信息业
+      - fieldCode: '12'
+        fieldText: 农林牧副渔
+      - fieldCode: '99'
+        fieldText: 其他
+    toTable: 0
+    inputType: select
+    defaultText: ""
+    optional: 0
+    itemLabel: "总部一级行业分类："
+  - defaultFieldCode: ""
+    readonly: 0
+    itemCode: SECOND_CALLING_TYPE_CODE
+    optionList:
+      - fieldCode: '0101'
+        fieldText: 银行
+      - fieldCode: '0102'
+        fieldText: 证券
+      - fieldCode: '0103'
+        fieldText: 保险
+      - fieldCode: '0104'
+        fieldText: 其它金融业
+      - fieldCode: '0201'
+        fieldText: 党
+      - fieldCode: '0202'
+        fieldText: 政府
+      - fieldCode: '0203'
+        fieldText: 军队
+      - fieldCode: '0301'
+        fieldText: 科研
+      - fieldCode: '0302'
+        fieldText: 教育业
+      - fieldCode: '0303'
+        fieldText: 文化体育
+      - fieldCode: '0304'
+        fieldText: 卫生业
+      - fieldCode: '0305'
+        fieldText: 广播电影电视业
+      - fieldCode: '0306'
+        fieldText: 新闻出版业
+      - fieldCode: '0401'
+        fieldText: 旅游业
+      - fieldCode: '0402'
+        fieldText: 住宿业
+      - fieldCode: '0403'
+        fieldText: 餐饮业
+      - fieldCode: '0404'
+        fieldText: 娱乐服务业
+      - fieldCode: '0501'
+        fieldText: 采矿业
+      - fieldCode: '0502'
+        fieldText: 通信电子设备制造业
+      - fieldCode: '0503'
+        fieldText: 汽车制造业
+      - fieldCode: '0504'
+        fieldText: 石油加工和化工制造业
+      - fieldCode: '0505'
+        fieldText: 医药制造业
+      - fieldCode: '0506'
+        fieldText: 食品制造业
+      - fieldCode: '0507'
+        fieldText: 服装、鞋、帽制造业
+      - fieldCode: '0599'
+        fieldText: 其它制造业
+      - fieldCode: '0601'
+        fieldText: 基础服务业
+      - fieldCode: '0602'
+        fieldText: 公共设施服务业
+      - fieldCode: '0603'
+        fieldText: 社区服务
+      - fieldCode: '0604'
+        fieldText: 信息、咨询服务业
+      - fieldCode: '0605'
+        fieldText: 租赁服务
+      - fieldCode: '0701'
+        fieldText: 交通运输业
+      - fieldCode: '0702'
+        fieldText: 邮政、快递
+      - fieldCode: '0703'
+        fieldText: 仓储业
+      - fieldCode: '0801'
+        fieldText: 批发业
+      - fieldCode: '0802'
+        fieldText: 零售业
+      - fieldCode: '0901'
+        fieldText: 房地产开发经营
+      - fieldCode: '0902'
+        fieldText: 物业管理
+      - fieldCode: '0903'
+        fieldText: 房地产中介服务
+      - fieldCode: '0999'
+        fieldText: 其他房地产活动
+      - fieldCode: '1001'
+        fieldText: 房屋工程建筑
+      - fieldCode: '1002'
+        fieldText: 土木工程建筑
+      - fieldCode: '1003'
+        fieldText: 建筑安装业
+      - fieldCode: '1004'
+        fieldText: 建筑装饰业
+      - fieldCode: '1099'
+        fieldText: 其他建筑业
+      - fieldCode: '1101'
+        fieldText: 基础通信业务运营业
+      - fieldCode: '1102'
+        fieldText: 互联网服务
+      - fieldCode: '1103'
+        fieldText: 增值通信业务运营业
+      - fieldCode: '1104'
+        fieldText: 计算机应用服务业
+      - fieldCode: '1201'
+        fieldText: 农业
+      - fieldCode: '1202'
+        fieldText: 林业
+      - fieldCode: '1203'
+        fieldText: 畜牧业
+      - fieldCode: '1204'
+        fieldText: 渔业
+      - fieldCode: '9901'
+        fieldText: 其他行业
+    toTable: 0
+    inputType: select
+    defaultText: ""
+    optional: 0
+    itemLabel: "总部二级行业分类："
+  - defaultFieldCode: ""
+    readonly: 0
+    itemCode: THIRD_CALLING_TYPE_CODE
+    optionList:
+      - fieldCode: '010101'
+        fieldText: 主管机构
+      - fieldCode: '010102'
+        fieldText: 政策性银行
+      - fieldCode: '010103'
+        fieldText: 商业银行
+      - fieldCode: '010104'
+        fieldText: 农村合作银行
+      - fieldCode: '010105'
+        fieldText: 城市信用社
+      - fieldCode: '010106'
+        fieldText: 农村信用社
+      - fieldCode: '010107'
+        fieldText: 资金互助社
+      - fieldCode: '010108'
+        fieldText: 邮政储蓄网点
+      - fieldCode: '010109'
+        fieldText: 村镇银行
+      - fieldCode: '010199'
+        fieldText: 其它
+      - fieldCode: '010201'
+        fieldText: 主管机构
+      - fieldCode: '010202'
+        fieldText: 交易机构
+      - fieldCode: '010203'
+        fieldText: 注册证券经济公司
+      - fieldCode: '010204'
+        fieldText: 基金代销公司
+      - fieldCode: '010205'
+        fieldText: 期货公司
+      - fieldCode: '010206'
+        fieldText: 经济结算公司
+      - fieldCode: '010207'
+        fieldText: 基金公司
+      - fieldCode: '010208'
+        fieldText: 投资咨询公司
+      - fieldCode: '010299'
+        fieldText: 其它
+      - fieldCode: '010301'
+        fieldText: 主管机构
+      - fieldCode: '010302'
+        fieldText: 保险集团控股公司
+      - fieldCode: '010303'
+        fieldText: 保险集团
+      - fieldCode: '010304'
+        fieldText: 再保险公司
+      - fieldCode: '010305'
+        fieldText: 外资保险公司
+      - fieldCode: '010306'
+        fieldText: 保险资产管理公司
+      - fieldCode: '010307'
+        fieldText: 保险专业中介公司
+      - fieldCode: '010399'
+        fieldText: 其它
+      - fieldCode: '010401'
+        fieldText: 金融资金管理公司
+      - fieldCode: '010402'
+        fieldText: 信托公司
+      - fieldCode: '010403'
+        fieldText: 财务公司
+      - fieldCode: '010404'
+        fieldText: 金融租赁公司
+      - fieldCode: '010405'
+        fieldText: 汽车金融公司
+      - fieldCode: '010406'
+        fieldText: 货币经纪公司
+      - fieldCode: '010407'
+        fieldText: 贷款公司
+      - fieldCode: '010408'
+        fieldText: 典当公司
+      - fieldCode: '010409'
+        fieldText: 融资公司
+      - fieldCode: '010499'
+        fieldText: 其它金融机构
+      - fieldCode: '020101'
+        fieldText: 各级党组织
+      - fieldCode: '020201'
+        fieldText: 公安
+      - fieldCode: '020202'
+        fieldText: 税务
+      - fieldCode: '020203'
+        fieldText: 工商
+      - fieldCode: '020204'
+        fieldText: 法院
+      - fieldCode: '020205'
+        fieldText: 检察院
+      - fieldCode: '020206'
+        fieldText: 海关
+      - fieldCode: '020207'
+        fieldText: 质量技术监督
+      - fieldCode: '020208'
+        fieldText: 交通运输管理部门
+      - fieldCode: '020209'
+        fieldText: 人力资源和社会保障
+      - fieldCode: '020299'
+        fieldText: 其他政府部门
+      - fieldCode: '020301'
+        fieldText: 军队
+      - fieldCode: '020302'
+        fieldText: 武警
+      - fieldCode: '020303'
+        fieldText: 消防
+      - fieldCode: '030101'
+        fieldText: 科研院所
+      - fieldCode: '030201'
+        fieldText: 学前教育
+      - fieldCode: '030202'
+        fieldText: 初等教育
+      - fieldCode: '030203'
+        fieldText: 中等教育
+      - fieldCode: '030204'
+        fieldText: 高等教育
+      - fieldCode: '030205'
+        fieldText: 职业技术专科学校
+      - fieldCode: '030299'
+        fieldText: 其他教育
+      - fieldCode: '030301'
+        fieldText: 文化艺术
+      - fieldCode: '030302'
+        fieldText: 体育
+      - fieldCode: '030399'
+        fieldText: 其他
+      - fieldCode: '030401'
+        fieldText: 医院
+      - fieldCode: '030499'
+        fieldText: 其他卫生机构
+      - fieldCode: '030501'
+        fieldText: 广播
+      - fieldCode: '030502'
+        fieldText: 电视
+      - fieldCode: '030503'
+        fieldText: 电影
+      - fieldCode: '030504'
+        fieldText: 音像制作
+      - fieldCode: '030601'
+        fieldText: 新闻业
+      - fieldCode: '030602'
+        fieldText: 出版业
+      - fieldCode: '040101'
+        fieldText: 旅行社/旅游公司
+      - fieldCode: '040102'
+        fieldText: 景区
+      - fieldCode: '040199'
+        fieldText: 其他旅游业
+      - fieldCode: '040201'
+        fieldText: 星级酒店
+      - fieldCode: '040202'
+        fieldText: 连锁酒店/便捷酒店
+      - fieldCode: '040299'
+        fieldText: 其他住宿业
+      - fieldCode: '040301'
+        fieldText: 连锁餐饮公司
+      - fieldCode: '040399'
+        fieldText: 其他餐饮
+      - fieldCode: '040401'
+        fieldText: 电影院
+      - fieldCode: '040402'
+        fieldText: 游戏厅/网吧
+      - fieldCode: '040499'
+        fieldText: 其他娱乐服务
+      - fieldCode: '050101'
+        fieldText: 石油和天然气开采业
+      - fieldCode: '050102'
+        fieldText: 煤炭和金属矿采选业
+      - fieldCode: '050199'
+        fieldText: 其他采掘业
+      - fieldCode: '050201'
+        fieldText: 通信设备制造业
+      - fieldCode: '050202'
+        fieldText: 电子计算机制造业
+      - fieldCode: '050203'
+        fieldText: 家用电器制造业
+      - fieldCode: '050299'
+        fieldText: 其他通信电子制造业
+      - fieldCode: '050301'
+        fieldText: 汽车制造业
+      - fieldCode: '050401'
+        fieldText: 石油加工和化工制造业
+      - fieldCode: '050501'
+        fieldText: 医药制造业
+      - fieldCode: '050601'
+        fieldText: 食品制造业
+      - fieldCode: '050701'
+        fieldText: 服装、鞋、帽制造业
+      - fieldCode: '059901'
+        fieldText: 其它制造业
+      - fieldCode: '060101'
+        fieldText: 电力的生产和供应
+      - fieldCode: '060102'
+        fieldText: 煤气的生产和供应
+      - fieldCode: '060103'
+        fieldText: 水的生产和供应
+      - fieldCode: '060201'
+        fieldText: 公共设施服务业
+      - fieldCode: '060301'
+        fieldText: 社区服务
+      - fieldCode: '060401'
+        fieldText: 广告业
+      - fieldCode: '060402'
+        fieldText: 咨询服务
+      - fieldCode: '060501'
+        fieldText: 租赁服务
+      - fieldCode: '070101'
+        fieldText: 航空运输
+      - fieldCode: '070102'
+        fieldText: 铁路运输
+      - fieldCode: '070103'
+        fieldText: 公路运输
+      - fieldCode: '070104'
+        fieldText: 水上运输
+      - fieldCode: '070105'
+        fieldText: 物流公司
+      - fieldCode: '070201'
+        fieldText: 邮政、快递
+      - fieldCode: '070301'
+        fieldText: 仓储业
+      - fieldCode: '080101'
+        fieldText: 食品批发
+      - fieldCode: '080102'
+        fieldText: 电子批发
+      - fieldCode: '080103'
+        fieldText: 小商品批发
+      - fieldCode: '080104'
+        fieldText: 服饰批发
+      - fieldCode: '080105'
+        fieldText: 建材批发
+      - fieldCode: '080199'
+        fieldText: 其他批发
+      - fieldCode: '080201'
+        fieldText: 连锁超市
+      - fieldCode: '080202'
+        fieldText: 商场
+      - fieldCode: '080299'
+        fieldText: 其他零售业
+      - fieldCode: '090101'
+        fieldText: 房地产开发经营
+      - fieldCode: '090201'
+        fieldText: 物业管理
+      - fieldCode: '090301'
+        fieldText: 房地产中介服务
+      - fieldCode: '099901'
+        fieldText: 其他房地产活动
+      - fieldCode: '100101'
+        fieldText: 房屋工程建筑
+      - fieldCode: '100201'
+        fieldText: 铁路、道路、隧道和桥梁工程建筑
+      - fieldCode: '100202'
+        fieldText: 水利和港口工程建筑
+      - fieldCode: '100203'
+        fieldText: 工矿工程建筑
+      - fieldCode: '100204'
+        fieldText: 架线和管道工程建筑
+      - fieldCode: '100299'
+        fieldText: 其他土木工程建筑
+      - fieldCode: '100301'
+        fieldText: 建筑安装业
+      - fieldCode: '100401'
+        fieldText: 建筑装饰业
+      - fieldCode: '109901'
+        fieldText: 其他建筑业
+      - fieldCode: '110101'
+        fieldText: 基础通信业务运营业
+      - fieldCode: '110201'
+        fieldText: 互联网服务
+      - fieldCode: '110301'
+        fieldText: 增值通信业务运营业
+      - fieldCode: '110401'
+        fieldText: 计算机应用服务业
+      - fieldCode: '120101'
+        fieldText: 农业
+      - fieldCode: '120201'
+        fieldText: 林业
+      - fieldCode: '120301'
+        fieldText: 畜牧业
+      - fieldCode: '120401'
+        fieldText: 渔业
+      - fieldCode: '990101'
+        fieldText: 其他行业
+    toTable: 0
+    inputType: select
+    defaultText: ""
+    optional: 0
+    itemLabel: "总部三级行业分类："
+  - defaultFieldCode: ""
+    readonly: 0
+    itemCode: VOCA_DEPT_TYPE_ID
+    optionList:
+      - fieldCode: "1"
+        fieldText: 金融
+      - fieldCode: "2"
+        fieldText: 政要
+      - fieldCode: "3"
+        fieldText: 大企业
+      - fieldCode: "4"
+        fieldText: 中小
+      - fieldCode: "5"
+        fieldText: 教育
+      - fieldCode: "6"
+        fieldText: 银行
+      - fieldCode: "7"
+        fieldText: 证券保险
+    toTable: 0
+    inputType: select
+    defaultText: ""
+    optional: 1
+    itemLabel: "行业部类型："
+  - defaultFieldCode: ""
+    readonly: 0
+    itemCode: FIRST_PROVINCE_CALLING_TYPE
+    optionList:
+      - fieldCode: '01AAAA'
+        fieldText: 金融业
+      - fieldCode: '02AAAA'
+        fieldText: 党政军部门
+      - fieldCode: '03AAAA'
+        fieldText: 科学、教育、文化体育、卫生、出版业
+      - fieldCode: '04AAAA'
+        fieldText: 旅游、饭店、娱乐服务业
+      - fieldCode: '05AAAA'
+        fieldText: 采掘业和加工、制造业
+      - fieldCode: '06AAAA'
+        fieldText: 公共服务业
+      - fieldCode: '07AAAA'
+        fieldText: 交通运输、仓储和邮政业
+      - fieldCode: '08AAAA'
+        fieldText: 批发、零售业
+      - fieldCode: '09AAAA'
+        fieldText: 房地产业
+      - fieldCode: '10AAAA'
+        fieldText: 建筑业
+      - fieldCode: '11AAAA'
+        fieldText: 计算机信息业
+      - fieldCode: '12AAAA'
+        fieldText: 农林牧副渔
+      - fieldCode: '99AAAA'
+        fieldText: 其他
+    toTable: 0
+    inputType: select
+    defaultText: ""
+    optional: 0
+    itemLabel: "省份一级行业分类："
+  - defaultFieldCode: ""
+    readonly: 0
+    itemCode: SECOND_PROVINCE_CALLING_TYPE
+    optionList:
+      - fieldCode: '0101AA'
+        fieldText: 银行
+      - fieldCode: '0102AA'
+        fieldText: 证券
+      - fieldCode: '0103AA'
+        fieldText: 保险
+      - fieldCode: '0104AA'
+        fieldText: 其它金融业
+      - fieldCode: '0201AA'
+        fieldText: 党
+      - fieldCode: '0202AA'
+        fieldText: 政府
+      - fieldCode: '0203AA'
+        fieldText: 军队
+      - fieldCode: '0301AA'
+        fieldText: 科研
+      - fieldCode: '0302AA'
+        fieldText: 教育业
+      - fieldCode: '0303AA'
+        fieldText: 文化体育
+      - fieldCode: '0304AA'
+        fieldText: 卫生业
+      - fieldCode: '0305AA'
+        fieldText: 广播电影电视业
+      - fieldCode: '0306AA'
+        fieldText: 新闻出版业
+      - fieldCode: '0401AA'
+        fieldText: 旅游业
+      - fieldCode: '0402AA'
+        fieldText: 住宿业
+      - fieldCode: '0403AA'
+        fieldText: 餐饮业
+      - fieldCode: '0404AA'
+        fieldText: 娱乐服务业
+      - fieldCode: '0501AA'
+        fieldText: 采矿业
+      - fieldCode: '0502AA'
+        fieldText: 通信电子设备制造业
+      - fieldCode: '0503AA'
+        fieldText: 汽车制造业
+      - fieldCode: '0504AA'
+        fieldText: 石油加工和化工制造业
+      - fieldCode: '0505AA'
+        fieldText: 医药制造业
+      - fieldCode: '0506AA'
+        fieldText: 食品制造业
+      - fieldCode: '0507AA'
+        fieldText: 服装、鞋、帽制造业
+      - fieldCode: '0599AA'
+        fieldText: 其它制造业
+      - fieldCode: '0601AA'
+        fieldText: 基础服务业
+      - fieldCode: '0602AA'
+        fieldText: 公共设施服务业
+      - fieldCode: '0603AA'
+        fieldText: 社区服务
+      - fieldCode: '0604AA'
+        fieldText: 信息、咨询服务业
+      - fieldCode: '0605AA'
+        fieldText: 租赁服务
+      - fieldCode: '0701AA'
+        fieldText: 交通运输业
+      - fieldCode: '0702AA'
+        fieldText: 邮政、快递
+      - fieldCode: '0703AA'
+        fieldText: 仓储业
+      - fieldCode: '0801AA'
+        fieldText: 批发业
+      - fieldCode: '0802AA'
+        fieldText: 零售业
+      - fieldCode: '0901AA'
+        fieldText: 房地产开发经营
+      - fieldCode: '0902AA'
+        fieldText: 物业管理
+      - fieldCode: '0903AA'
+        fieldText: 房地产中介服务
+      - fieldCode: '0999AA'
+        fieldText: 其他房地产活动
+      - fieldCode: '1001AA'
+        fieldText: 房屋工程建筑
+      - fieldCode: '1002AA'
+        fieldText: 土木工程建筑
+      - fieldCode: '1003AA'
+        fieldText: 建筑安装业
+      - fieldCode: '1004AA'
+        fieldText: 建筑装饰业
+      - fieldCode: '1099AA'
+        fieldText: 其他建筑业
+      - fieldCode: '1101AA'
+        fieldText: 基础通信业务运营业
+      - fieldCode: '1102AA'
+        fieldText: 互联网服务
+      - fieldCode: '1103AA'
+        fieldText: 增值通信业务运营业
+      - fieldCode: '1104AA'
+        fieldText: 计算机应用服务业
+      - fieldCode: '1201AA'
+        fieldText: 农业
+      - fieldCode: '1202AA'
+        fieldText: 林业
+      - fieldCode: '1203AA'
+        fieldText: 畜牧业
+      - fieldCode: '1204AA'
+        fieldText: 渔业
+      - fieldCode: '9901AA'
+        fieldText: 其他行业
+    toTable: 0
+    inputType: select
+    defaultText: ""
+    optional: 0
+    itemLabel: "省份二级行业分类："
+  - defaultFieldCode: ""
+    readonly: 0
+    itemCode: THIRD_PROVINCE_CALLING_TYPE
+    optionList:
+      - fieldCode: '010101'
+        fieldText: 主管机构
+      - fieldCode: '010102'
+        fieldText: 政策性银行
+      - fieldCode: '010103'
+        fieldText: 商业银行
+      - fieldCode: '010104'
+        fieldText: 农村合作银行
+      - fieldCode: '010105'
+        fieldText: 城市信用社
+      - fieldCode: '010106'
+        fieldText: 农村信用社
+      - fieldCode: '010107'
+        fieldText: 资金互助社
+      - fieldCode: '010108'
+        fieldText: 邮政储蓄网点
+      - fieldCode: '010109'
+        fieldText: 村镇银行
+      - fieldCode: '010199'
+        fieldText: 其它
+      - fieldCode: '010201'
+        fieldText: 主管机构
+      - fieldCode: '010202'
+        fieldText: 交易机构
+      - fieldCode: '010203'
+        fieldText: 注册证券经济公司
+      - fieldCode: '010204'
+        fieldText: 基金代销公司
+      - fieldCode: '010205'
+        fieldText: 期货公司
+      - fieldCode: '010206'
+        fieldText: 经济结算公司
+      - fieldCode: '010207'
+        fieldText: 基金公司
+      - fieldCode: '010208'
+        fieldText: 投资咨询公司
+      - fieldCode: '010299'
+        fieldText: 其它
+      - fieldCode: '010301'
+        fieldText: 主管机构
+      - fieldCode: '010302'
+        fieldText: 保险集团控股公司
+      - fieldCode: '010303'
+        fieldText: 保险集团
+      - fieldCode: '010304'
+        fieldText: 再保险公司
+      - fieldCode: '010305'
+        fieldText: 外资保险公司
+      - fieldCode: '010306'
+        fieldText: 保险资产管理公司
+      - fieldCode: '010307'
+        fieldText: 保险专业中介公司
+      - fieldCode: '010399'
+        fieldText: 其它
+      - fieldCode: '010401'
+        fieldText: 金融资金管理公司
+      - fieldCode: '010402'
+        fieldText: 信托公司
+      - fieldCode: '010403'
+        fieldText: 财务公司
+      - fieldCode: '010404'
+        fieldText: 金融租赁公司
+      - fieldCode: '010405'
+        fieldText: 汽车金融公司
+      - fieldCode: '010406'
+        fieldText: 货币经纪公司
+      - fieldCode: '010407'
+        fieldText: 贷款公司
+      - fieldCode: '010408'
+        fieldText: 典当公司
+      - fieldCode: '010409'
+        fieldText: 融资公司
+      - fieldCode: '010499'
+        fieldText: 其它金融机构
+      - fieldCode: '020101'
+        fieldText: 各级党组织
+      - fieldCode: '020201'
+        fieldText: 公安
+      - fieldCode: '020202'
+        fieldText: 税务
+      - fieldCode: '020203'
+        fieldText: 工商
+      - fieldCode: '020204'
+        fieldText: 法院
+      - fieldCode: '020205'
+        fieldText: 检察院
+      - fieldCode: '020206'
+        fieldText: 海关
+      - fieldCode: '020207'
+        fieldText: 质量技术监督
+      - fieldCode: '020208'
+        fieldText: 交通运输管理部门
+      - fieldCode: '020209'
+        fieldText: 人力资源和社会保障
+      - fieldCode: '020299'
+        fieldText: 其他政府部门
+      - fieldCode: '020301'
+        fieldText: 军队
+      - fieldCode: '020302'
+        fieldText: 武警
+      - fieldCode: '020303'
+        fieldText: 消防
+      - fieldCode: '030101'
+        fieldText: 科研院所
+      - fieldCode: '030201'
+        fieldText: 学前教育
+      - fieldCode: '030202'
+        fieldText: 初等教育
+      - fieldCode: '030203'
+        fieldText: 中等教育
+      - fieldCode: '030204'
+        fieldText: 高等教育
+      - fieldCode: '030205'
+        fieldText: 职业技术专科学校
+      - fieldCode: '030299'
+        fieldText: 其他教育
+      - fieldCode: '030301'
+        fieldText: 文化艺术
+      - fieldCode: '030302'
+        fieldText: 体育
+      - fieldCode: '030399'
+        fieldText: 其他
+      - fieldCode: '030401'
+        fieldText: 医院
+      - fieldCode: '030499'
+        fieldText: 其他卫生机构
+      - fieldCode: '030501'
+        fieldText: 广播
+      - fieldCode: '030502'
+        fieldText: 电视
+      - fieldCode: '030503'
+        fieldText: 电影
+      - fieldCode: '030504'
+        fieldText: 音像制作
+      - fieldCode: '030601'
+        fieldText: 新闻业
+      - fieldCode: '030602'
+        fieldText: 出版业
+      - fieldCode: '040101'
+        fieldText: 旅行社/旅游公司
+      - fieldCode: '040102'
+        fieldText: 景区
+      - fieldCode: '040199'
+        fieldText: 其他旅游业
+      - fieldCode: '040201'
+        fieldText: 星级酒店
+      - fieldCode: '040202'
+        fieldText: 连锁酒店/便捷酒店
+      - fieldCode: '040299'
+        fieldText: 其他住宿业
+      - fieldCode: '040301'
+        fieldText: 连锁餐饮公司
+      - fieldCode: '040399'
+        fieldText: 其他餐饮
+      - fieldCode: '040401'
+        fieldText: 电影院
+      - fieldCode: '040402'
+        fieldText: 游戏厅/网吧
+      - fieldCode: '040499'
+        fieldText: 其他娱乐服务
+      - fieldCode: '050101'
+        fieldText: 石油和天然气开采业
+      - fieldCode: '050102'
+        fieldText: 煤炭和金属矿采选业
+      - fieldCode: '050199'
+        fieldText: 其他采掘业
+      - fieldCode: '050201'
+        fieldText: 通信设备制造业
+      - fieldCode: '050202'
+        fieldText: 电子计算机制造业
+      - fieldCode: '050203'
+        fieldText: 家用电器制造业
+      - fieldCode: '050299'
+        fieldText: 其他通信电子制造业
+      - fieldCode: '060101'
+        fieldText: 电力的生产和供应
+      - fieldCode: '060102'
+        fieldText: 煤气的生产和供应
+      - fieldCode: '060103'
+        fieldText: 水的生产和供应
+      - fieldCode: '060401'
+        fieldText: 广告业
+      - fieldCode: '060402'
+        fieldText: 咨询服务
+      - fieldCode: '070101'
+        fieldText: 航空运输
+      - fieldCode: '070102'
+        fieldText: 铁路运输
+      - fieldCode: '070103'
+        fieldText: 公路运输
+      - fieldCode: '070104'
+        fieldText: 水上运输
+      - fieldCode: '070105'
+        fieldText: 物流公司
+      - fieldCode: '080101'
+        fieldText: 食品批发
+      - fieldCode: '080102'
+        fieldText: 电子批发
+      - fieldCode: '080103'
+        fieldText: 小商品批发
+      - fieldCode: '080104'
+        fieldText: 服饰批发
+      - fieldCode: '080105'
+        fieldText: 建材批发
+      - fieldCode: '080199'
+        fieldText: 其他批发
+      - fieldCode: '080201'
+        fieldText: 连锁超市
+      - fieldCode: '080202'
+        fieldText: 商场
+      - fieldCode: '080299'
+        fieldText: 其他零售业
+      - fieldCode: '100201'
+        fieldText: 铁路、道路、隧道和桥梁工程建筑
+      - fieldCode: '100202'
+        fieldText: 水利和港口工程建筑
+      - fieldCode: '100203'
+        fieldText: 工矿工程建筑
+      - fieldCode: '100204'
+        fieldText: 架线和管道工程建筑
+      - fieldCode: '100299'
+        fieldText: 其他土木工程建筑
+    toTable: 0
+    inputType: select
+    defaultText: ""
+    optional: 0
+    itemLabel: "省份三级行业分类："
+  - defaultFieldCode: ""
+    readonly: 0
+    itemCode: SERV_LEVEL_ID
+    optionList:
+      - fieldCode: "0"
+        fieldText: 普通
+      - fieldCode: "1"
+        fieldText: 至尊卡
+      - fieldCode: "2"
+        fieldText: 钻石卡
+      - fieldCode: "3"
+        fieldText: 白金
+      - fieldCode: "4"
+        fieldText: 金卡
+      - fieldCode: "5"
+        fieldText: 银卡
+    toTable: 0
+    inputType: select
+    defaultText: ""
+    optional: 1
+    itemLabel: "服务等级："
+  - defaultFieldCode: ""
+    readonly: 0
+    itemCode: OFFICE_TYPE
+    optionList:
+      - fieldCode: "0"
+        fieldText: 专业市场
+      - fieldCode: "1"
+        fieldText: 商务楼宇
+      - fieldCode: "2"
+        fieldText: 工业园区
+      - fieldCode: "3"
+        fieldText: 沿街商铺
+      - fieldCode: "4"
+        fieldText: 其他
+    toTable: 0
+    inputType: select
+    defaultText: ""
+    optional: 0
+    itemLabel: "中小企业营业场所："
+  - defaultFieldCode: ""
+    readonly: 0
+    itemCode: TRANSACTOR_NAME
+    toTable: 0
+    inputType: text
+    defaultText: ""
+    optional: 0
+    itemLabel: "经办人姓名："
+  - defaultFieldCode: ""
+    readonly: 0
+    itemCode: CERTI_TYPE_CODE
+    optionList:
+      - fieldCode: "1"
+        fieldText: 身份证18位
+    toTable: 0
+    inputType: select
+    defaultText: ""
+    optional: 0
+    itemLabel: "经办人证件类型："
+  - defaultFieldCode: ""
+    readonly: 0
+    itemCode: CERTI_CODE
+    toTable: 0
+    inputType: text
+    defaultText: ""
+    optional: 0
+    itemLabel: "经办人证件号码："
+  - defaultFieldCode: ""
+    readonly: 0
+    itemCode: CERTI_ADDR
+    toTable: 0
+    inputType: text
+    defaultText: ""
+    optional: 0
+    itemLabel: "经办人证件地址/通信地址："
+  - defaultFieldCode: ""
+    readonly: 0
+    itemCode: PHONE
+    toTable: 9
+    inputType: text
+    defaultText: ""
+    optional: 0
+    itemLabel: "经办人电话"
+  - defaultFieldCode: ""
+    readonly: 0
+    itemCode: EMAIL
+    toTable: 0
+    inputType: email
+    defaultText: ""
+    optional: 0
+    itemLabel: "经办人E-mail"

@@ -1,0 +1,76 @@
+itemList:
+  - defaultFieldCode: ''
+    readonly: 0
+    itemCode: BUSINESS_PROJ
+    optionList:
+    - fieldCode: '01'
+      fieldText: 金融业
+    - fieldCode: '02'
+      fieldText: 党政军部门
+    - fieldCode: '03'
+      fieldText: 科学、教育、文化体育、卫生、出版业
+    - fieldCode: '04'
+      fieldText: 旅游、饭店、娱乐服务业
+    - fieldCode: '05'
+      fieldText: 采掘业和加工、制造业
+    - fieldCode: '06'
+      fieldText: 公共服务业
+    - fieldCode: '07'
+      fieldText: 交通运输、仓储和邮政业
+    - fieldCode: '08'
+      fieldText: 批发、零售业
+    - fieldCode: '09'
+      fieldText: 房地产业
+    - fieldCode: '10'
+      fieldText: 建筑业
+    - fieldCode: '11'
+      fieldText: 计算机信息业
+    - fieldCode: '12'
+      fieldText: 农林牧副渔
+    - fieldCode: '99'
+      fieldText: 其他
+    toTable: 0
+    inputType: select
+    defaultText: ''
+    optional: 0
+    itemLabel: 客户企业性质：
+  - defaultFieldCode: ''
+    readonly: 0
+    itemCode: VELOCITY_MSTP
+    optionList:
+    - fieldCode: '50'
+      fieldText: 50M 19700元
+    - fieldCode: '100'
+      fieldText: 100M 31200元
+    - fieldCode: '200'
+      fieldText: 200M 51600元
+    toTable: 0
+    inputType: select
+    defaultText: ''
+    optional: 0
+    itemLabel: 速率：
+  - defaultFieldCode: ''
+    readonly: 0
+    itemCode: MONTHLY_DISCOUNT
+    toTable: 0
+    inputType: text
+    defaultText: ''
+    optional: 0
+    itemLabel: '折扣(%):'
+  - defaultFieldCode: ''
+    readonly: 0
+    itemCode: CONTRACT_EXPIRE_DATE
+    toTable: 0
+    inputType: number
+    defaultText: '1'
+    optional: 0
+    itemLabel: 合同周期（月）：
+  - defaultFieldCode: ''
+    readonly: 0
+    itemCode: ACTOR_PHONE
+    toTable: 0
+    inputType: number
+    defaultText: ''
+    optional: 0
+    itemLabel: 经办人电话
+  

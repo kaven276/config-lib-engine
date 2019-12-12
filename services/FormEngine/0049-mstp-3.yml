@@ -1,0 +1,131 @@
+itemList:
+  - defaultFieldCode: ''
+    readonly: 0
+    itemCode: acctMode
+    optionList:
+    - fieldCode: '0'
+      fieldText: 新增账户
+    - fieldCode: '1'
+      fieldText: 已有账户
+    toTable: 0
+    inputType: select
+    defaultText: ''
+    optional: 0
+    itemLabel: '账户类型:'
+  - defaultFieldCode: ''
+    readonly: 0
+    itemCode: PAY_NAME
+    toTable: 0
+    inputType: text
+    defaultText: ''
+    optional: 0
+    itemLabel: '帐户名称：'
+  - defaultFieldCode: ''
+    readonly: 0
+    itemCode: PAY_MODE_CODE
+    optionList:
+    - fieldCode: '0'
+      fieldText: 现金
+    - fieldCode: '1'
+      fieldText: 普通托收
+    - fieldCode: '2'
+      fieldText: 电汇
+    - fieldCode: '4'
+      fieldText: 通联代扣
+    - fieldCode: '5'
+      fieldText: 银行代扣
+    toTable: 0
+    inputType: select
+    defaultText: ''
+    optional: 0
+    itemLabel: '帐户类别：'
+  - defaultFieldCode: ''
+    readonly: 0
+    itemCode: BANK_ACCT_NAME
+    toTable: 0
+    inputType: text
+    defaultText: ''
+    optional: 0
+    itemLabel: '托收帐户名称：'
+  - defaultFieldCode: ''
+    readonly: 0
+    itemCode: compTag
+    optionList:
+    - fieldCode: '0'
+      fieldText: 不合并
+    - fieldCode: '2'
+      fieldText: 合并
+    toTable: 0
+    inputType: select
+    defaultText: ''
+    optional: 0
+    itemLabel: '是否合并托收：'
+  - defaultFieldCode: ''
+    readonly: 0
+    itemCode: DEBUTY_CODE
+    toTable: 0
+    inputType: text
+    defaultText: ''
+    optional: 0
+    itemLabel: '合并托收代表号：'
+  - defaultFieldCode: ''
+    readonly: 0
+    itemCode: CONSIGN_NAME
+    toTable: 0
+    inputType: text
+    defaultText: ''
+    optional: 0
+    itemLabel: '托收等级：'
+  - defaultFieldCode: ''
+    readonly: 0
+    itemCode: SUPER_BANK_CODE
+    optionList:
+    - fieldCode: '0'
+      fieldText: 不合并
+    - fieldCode: '2'
+      fieldText: 合并
+    toTable: 0
+    inputType: select
+    defaultText: ''
+    optional: 0
+    itemLabel: '上级银行：'
+  - defaultFieldCode: ''
+    readonly: 0
+    itemCode: BANK_CODE
+    toTable: 0
+    inputType: text
+    defaultText: ''
+    optional: 0
+    itemLabel: '银行名称：'
+  - defaultFieldCode: ''
+    readonly: 0
+    itemCode: BANK_ACCT_NO
+    toTable: 0
+    inputType: text
+    defaultText: ''
+    optional: 0
+    itemLabel: '银行帐号：'
+  - defaultFieldCode: ''
+    readonly: 0
+    itemCode: AGREEMENT_NO
+    toTable: 0
+    inputType: text
+    defaultText: ''
+    optional: 0
+    itemLabel: '协议编码：'
+  - defaultFieldCode: ''
+    readonly: 0
+    itemCode: BANK_BUSI_KIND
+    toTable: 0
+    inputType: text
+    defaultText: ''
+    optional: 0
+    itemLabel: '业务编码：'
+  - defaultFieldCode: ''
+    readonly: 0
+    itemCode: ACCT_NUM
+    toTable: 0
+    inputType: text
+    defaultText: ''
+    optional: 0
+    itemLabel: '账户标识：'

@@ -1,0 +1,96 @@
+---
+itemList:
+- defaultFieldCode: ''
+  readonly: 0
+  itemCode: LICENSE_TYPE
+  optionList:
+  - fieldCode: '0'
+    fieldText: 个体工商户营业执照
+  - fieldCode: '1'
+    fieldText: 个人独资企业营业执照
+  - fieldCode: '2'
+    fieldText: 合伙企业营业执照
+  - fieldCode: '3'
+    fieldText: 企业法人营业执照
+  - fieldCode: '4'
+    fieldText: 农民专业合作社营业执照
+  - fieldCode: '9'
+    fieldText: 其他营业执照类型
+  toTable: 0
+  inputType: select
+  defaultText: ''
+  optional: 0
+  itemLabel: '证件类型:'
+- defaultFieldCode: ''
+  readonly: 0
+  itemCode: CERT_NAME
+  toTable: 0
+  inputType: text
+  defaultText: ''
+  optional: 0
+  itemLabel: '(企业/字号)名称:'
+- defaultFieldCode: ''
+  readonly: 1
+  itemCode: CERT_CODE
+  toTable: 0
+  inputType: text
+  defaultText: ''
+  optional: 0
+  itemLabel: '注册号:'
+- defaultFieldCode: ''
+  readonly: 0
+  itemCode: ADDR
+  toTable: 0
+  inputType: text
+  defaultText: ''
+  optional: 0
+  itemLabel: '住所/经营场所:'
+- defaultFieldCode: ''
+  readonly: 0
+  itemCode: LEGAL_NAME
+  toTable: 0
+  inputType: text
+  defaultText: ''
+  optional: 0
+  itemLabel: '法人/经营者:'
+- defaultFieldCode: ''
+  readonly: 0
+  itemCode: REGISTER_CAPITAL
+  toTable: 0
+  inputType: text
+  defaultText: ''
+  optional: 1
+  itemLabel: '注册资本:'
+- defaultFieldCode: ''
+  readonly: 0
+  itemCode: BUSI_AREA
+  toTable: 0
+  inputType: text
+  defaultText: ''
+  optional: 1
+  itemLabel: '经营范围:'
+- defaultFieldCode: ''
+  readonly: 0
+  itemCode: SEND_DEPT
+  toTable: 0
+  inputType: text
+  defaultText: ''
+  optional: 1
+  itemLabel: '发证机关:'
+- defaultFieldCode: ''
+  readonly: 0
+  itemCode: SEND_DATE
+  toTable: 0
+  inputType: date
+  defaultText: ''
+  optional: 0
+  itemLabel: '发证日期:'
+- defaultFieldCode: ''
+  readonly: 0
+  itemCode: CERT_END_DATE
+  toTable: 0
+  inputType: date
+  defaultText: ''
+  optional: 0
+  itemLabel: '有效期至:'
+

@@ -1,0 +1,18 @@
+itemList:
+  - defaultFieldCode: ''
+    readonly: 0
+    itemCode: LINK_PHONE1
+    toTable: 0
+    inputType: number
+    defaultText: ''
+    optional: 0
+    itemLabel: 电话
+  - defaultFieldCode: ''
+    readonly: 0
+    itemCode: LINK_REMARK
+    toTable: 0
+    inputType: text
+    defaultText: ''
+    optional: 0
+    itemLabel: 邮箱
+
