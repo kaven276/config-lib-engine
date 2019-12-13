@@ -19,6 +19,9 @@ function processDir(event, path) {
     dirConfig = Object.create({ // root config.js inherit nothing or anything in future
       index: subMap => subMap,
     });
+  // eslint-disable-next-line no-constant-condition
+  } else if (true) { // dirConfig not prototyped to higher dirConfig
+    dirConfig = Object.create({});
   } else {
     const upPath = path.substr(0, path.lastIndexOf('/'));
     const upDirConfig = dirMap.get(upPath);
