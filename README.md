@@ -87,6 +87,13 @@ exports.index = subMap =>
 pm2 cluster 引导服务时，只有当全部配置加载和校验通过后，才会发出 process.send('ready')，开始接受请求。
 因此 pm2 集群模式下，可以完全做到零中断重启，全量更新。
 
+## 参数筛选
+
+普通调用会将配置文件内容全部返回，而带参数删选范例，只返回了匹配查询串的一条记录，如：
+```
+curl 'http://127.0.0.1:3019/example/table?PRODUCT_ID=90529831'
+{"respCode":0,"respDesc":"","data":[{"PRODUCT_ID":"90529831","PRODUCT_ALLNAME":"2019年2月天津冰激凌套餐99元档购机送券合约每月送35元花呗还款电子券（24个月）[社会渠道]","PRODUCT_NAME":"每月送35元花呗还款电子券（24个月）[社会渠道]","PRICE":720}]
+```
 
 Roadmap
 ========
