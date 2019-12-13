@@ -54,6 +54,9 @@ app.use(async (ctx, next) => {
       respDesc: '',
       data: result,
     };
+    if (ctx.state.req.pretty) {
+      ctx.body = JSON.stringify(ctx.body, null, 2);
+    }
   } else {
     ctx.body = {
       respCode: -1,

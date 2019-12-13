@@ -95,11 +95,58 @@ curl 'http://127.0.0.1:3019/example/table?PRODUCT_ID=90529831'
 {"respCode":0,"respDesc":"","data":[{"PRODUCT_ID":"90529831","PRODUCT_ALLNAME":"2019年2月天津冰激凌套餐99元档购机送券合约每月送35元花呗还款电子券（24个月）[社会渠道]","PRODUCT_NAME":"每月送35元花呗还款电子券（24个月）[社会渠道]","PRICE":720}]
 ```
 
+## pretty 响应
+
+当请求参数带有 pretty 时，则响应按照两个空格缩进格式化完返回，方便人眼看
+```
+curl 'http://127.0.0.1:3019/example/schema'         
+{"respCode":0,"respDesc":"","data":{"type":"object","properties":{"first_name":{"type":"string"},"last_name":{"type":"string"},"birthday":{"type":"string","format":"date"},"address":{"type":"object","properties":{"streed_address":{"type":"string"},"city":{"type":"string"},"state":{"type":"string"},"country":{"type":"string"}}}}}
+
+curl 'http://127.0.0.1:3019/example/schema?pretty=1'
+{
+  "respCode": 0,
+  "respDesc": "",
+  "data": {
+    "type": "object",
+    "properties": {
+      "first_name": {
+        "type": "string"
+      },
+      "last_name": {
+        "type": "string"
+      },
+      "birthday": {
+        "type": "string",
+        "format": "date"
+      },
+      "address": {
+        "type": "object",
+        "properties": {
+          "streed_address": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
+```
+
 Roadmap
 ========
 - [x] git commit 快速扫描目录校验，不等待 chokidar 完成；可以按照计数来确定是否完成，完成无报错 exit 0
 - [x] example 应用第二个校验库 fastest-validator
 - [] markdown 配置复杂数据结构，突破单 table 限制
+- [] 只有变更过的文件才进行校验
 - [] 不同的部署环境(测试，预发布，生产等等)可以使用不同的配置文件
 
 
