@@ -32,7 +32,8 @@ markdown 配置
 validator 配置
 ---------------
 
-范例见 [services/FormEngine/config.js](./services/FormEngine/config.js)
+- 范例1见 [services/FormEngine/config.js](./services/FormEngine/config.js) 使用 [superstruct][] 校验
+- 范例2见 [services/example/config.js](./services/example/config.js) 使用 [fastest-validator][] 校验
 
 ```javascript
 exports.validator = (filename, config) => configValicator;
@@ -76,5 +77,10 @@ pm2 cluster 引导服务时，只有当全部配置加载和校验通过后，�
 Roadmap
 ========
 - [x] git commit 快速扫描目录校验，不等待 chokidar 完成；可以按照计数来确定是否完成，完成无报错 exit 0
+- [x] example 应用第二个校验库 fastest-validator
 - [] markdown 配置复杂数据结构，突破单 table 限制
 - [] 不同的部署环境(测试，预发布，生产等等)可以使用不同的配置文件
+
+
+[superstruct]: https://github.com/ianstormtaylor/superstruct#readme
+[fastest-validator]: https://github.com/icebob/fastest-validator
