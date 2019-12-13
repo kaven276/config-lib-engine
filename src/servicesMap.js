@@ -4,10 +4,12 @@ const fs = require('fs');
 const join = require('path').join;
 const loadMarkdown = require('./loadMarkdown.js');
 const json5 = require('json5');
+const getFileCount = require('./scanFiles.js');
 
 const dirMap = new Map();
 const registry = {}; // form configs registry
 const configDir = `${process.env.CONFIG_DIR || join(process.cwd(), 'services')}/`;
+let countDown = getFileCount(configDir);
 
 // load dir module first, the dir/config.js will replace dir module
 function processDir(event, path) {
@@ -153,16 +155,16 @@ chokidar
   })
   .on('all', (event, path) => {
     // console.log(event, path);
+    if (event === 'add' || event === 'addDir') {
+      countDown -= 1;
+      if (countDown === 0 && module === require.main) {
+        // console.log('after scan all dir/file, quit');
+        process.exit(0);
+      }
+    }
     if (processDir(event, path)) return;
     if (processDirConfig(event, path)) return;
     processConfigModuleTypes(event, path);
   });
 
 exports.configMap = registry;
-
-// execute as npm test before git commit check
-if (module === require.main) {
-  setTimeout(() => {
-    process.exit(0);
-  }, 1500);
-}

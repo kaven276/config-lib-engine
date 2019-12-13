@@ -62,5 +62,6 @@ exports.index = subMap =>
 
 Roadmap
 ========
+- [x] git commit 快速扫描目录校验，不等待 chokidar 完成；可以按照计数来确定是否完成，完成无报错 exit 0
 - [] markdown 配置复杂数据结构，突破单 table 限制
 - [] 不同的部署环境(测试，预发布，生产等等)可以使用不同的配置文件
