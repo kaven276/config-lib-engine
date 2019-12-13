@@ -160,9 +160,14 @@ chokidar
     // console.log(event, path);
     if (event === 'add' || event === 'addDir') {
       countDown -= 1;
-      if (countDown === 0 && module === require.main) {
-        // console.log('after scan all dir/file, quit');
-        process.exit(0);
+      if (countDown === 0) {
+        if (module === require.main) {
+          // console.log('after scan all dir/file, quit');
+          process.exit(0);
+        } else if (process.send) {
+          // console.log('all config loaded and passed validation, pm2 serve ready!');
+          process.send('ready');
+        }
       }
     }
     if (processDir(event, path)) return;
