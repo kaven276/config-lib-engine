@@ -84,10 +84,8 @@ function processConfigModule(event, path, purePath, parse, text) {
     process.exit(1);
   }
   // get dirConfig
-  // const upPath = path.substr(0, path.lastIndexOf('/'));
-  const match = purePath.match((/^(.*?)(\/?)([^/]+)$/));
-  const upPath = match[1] || '';
-  const fileName = match[3];
+  const upPath = Path.dirname(path);
+  const fileName = Path.basename(purePath);
   const upDirConfig = dirMap.get(upPath);
   const upDirSubMap = upDirConfig.subMap;
   if (event === 'unlink') {
