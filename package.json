@@ -16,18 +16,18 @@
   "dependencies": {
     "chokidar": "^3.3.0",
     "debug": "^4.1.1",
-    "fastest-validator": "^0.6.19",
     "js-yaml": "^3.13.1",
     "json5": "^2.1.0",
     "koa": "^2.7.0",
     "koa-body": "^2.5.0",
     "marked": "^0.6.2",
-    "shelljs": "^0.8.3",
-    "superstruct": "^0.8.2"
+    "shelljs": "^0.8.3"
   },
   "devDependencies": {
     "eslint": "^4.9.0",
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0"
+    "eslint-plugin-import": "^2.8.0",
+    "fastest-validator": "^0.6.19",
+    "superstruct": "^0.8.2"
   }
 }
