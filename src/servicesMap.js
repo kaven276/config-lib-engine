@@ -158,6 +158,13 @@ chokidar
   })
   .on('all', (event, path) => {
     // console.log(event, path);
+    if (processDir(event, path)) {
+      // do nothing
+    } else if (processDirConfig(event, path)) {
+      // do nothing
+    } else {
+      processConfigModuleTypes(event, path);
+    }
     if (event === 'add' || event === 'addDir') {
       countDown -= 1;
       if (countDown === 0) {
@@ -170,9 +177,6 @@ chokidar
         }
       }
     }
-    if (processDir(event, path)) return;
-    if (processDirConfig(event, path)) return;
-    processConfigModuleTypes(event, path);
   });
 
 exports.configMap = registry;
