@@ -1,15 +1,16 @@
+// NOTICE: all file path operation use nodejs Path API, so posix/win32 will all do right
+
 const chokidar = require('chokidar');
 const YAML = require('js-yaml');
 const fs = require('fs');
 const Path = require('path');
-const join = require('path').join;
 const loadMarkdown = require('./loadMarkdown.js');
 const json5 = require('json5');
 const getFileCount = require('./scanFiles.js');
 
 const dirMap = new Map();
 const registry = {}; // form configs registry
-const configDir = `${process.env.CONFIG_DIR || join(process.cwd(), 'services')}/`;
+const configDir = `${process.env.CONFIG_DIR || Path.join(process.cwd(), 'services')}/`;
 let countDown = getFileCount(configDir);
 
 // load dir module first, the dir/config.js will replace dir module
@@ -38,7 +39,7 @@ function processDir(event, path) {
   dirMap.set(path, dirConfig);
   registry[`/${path}/`] = dirConfig;
   // eslint-disable-next-line no-use-before-define
-  processDirConfig('addWithDir', join(path, 'config.js'));
+  processDirConfig('addWithDir', Path.join(path, 'config.js'));
   return true;
 }
 
@@ -47,7 +48,7 @@ function processDirConfig(event, path) {
   if (filename !== 'config.js') return false;
   const dirPath = Path.dirname(path);
   const dirConfig = dirMap.get(dirPath);
-  const requirePath = join(configDir, path);
+  const requirePath = Path.join(configDir, path);
   if (event === 'change' || event === 'unlink') {
     Object.keys(dirConfig).forEach((n) => {
       delete dirConfig[n];
@@ -109,7 +110,7 @@ function processConfigModule(event, path, purePath, parse, text) {
 }
 
 function processConfigModuleTypes(event, path) {
-  const requirePath = join(configDir, path);
+  const requirePath = Path.join(configDir, path);
   const suffix = Path.extname(path);
   if (!suffix.match(/.(yml|yaml|md|markdown|json|json5)/)) return false;
   const filename = Path.basename(path, suffix);
