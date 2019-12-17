@@ -29,5 +29,8 @@
     "eslint-plugin-import": "^2.8.0",
     "fastest-validator": "^0.6.19",
     "superstruct": "^0.8.2"
+  },
+  "engines" : {
+    "node" : ">=8.9.3"
   }
 }
