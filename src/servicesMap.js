@@ -85,7 +85,10 @@ function processConfigModule(event, path, purePath, parse, text) {
     process.exit(1);
   }
   // get dirConfig
-  const upPath = Path.dirname(path);
+  let upPath = Path.dirname(path);
+  if (upPath === '.') { // if path like filename.ext, then Path.dirname will get . not ''
+    upPath = '';
+  }
   const fileName = Path.basename(purePath);
   const upDirConfig = dirMap.get(upPath);
   const upDirSubMap = upDirConfig.subMap;
