@@ -37,7 +37,7 @@ function processDir(event, path) {
   dirMap.set(path, dirConfig);
   registry[`/${path}/`] = dirConfig;
   // eslint-disable-next-line no-use-before-define
-  processDirConfig('addWithDir', `${path}/config.js`);
+  processDirConfig('addWithDir', join(path, 'config.js'));
   return true;
 }
 
@@ -46,7 +46,7 @@ function processDirConfig(event, path) {
   if (!matchDirConfig) return false;
   const dirPath = matchDirConfig[1];
   const dirConfig = dirMap.get(dirPath);
-  const requirePath = configDir + path;
+  const requirePath = join(configDir, path);
   if (event === 'change' || event === 'unlink') {
     Object.keys(dirConfig).forEach((n) => {
       delete dirConfig[n];
@@ -109,7 +109,7 @@ function processConfigModule(event, path, purePath, parse, text) {
 }
 
 function processConfigModuleTypes(event, path) {
-  const requirePath = configDir + path;
+  const requirePath = join(configDir, path);
   const match = path.match(/^(.+)\.(yml|yaml|md|markdown|json|json5)$/);
   if (!match) return false;
   if (match[1].endsWith('README')) return false;
