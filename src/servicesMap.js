@@ -43,9 +43,9 @@ function processDir(event, path) {
 }
 
 function processDirConfig(event, path) {
-  const matchDirConfig = path.match(/^(.+)(\/config\.js)$/);
-  if (!matchDirConfig) return false;
-  const dirPath = matchDirConfig[1];
+  const filename = Path.basename(path);
+  if (filename !== 'config.js') return false;
+  const dirPath = Path.dirname(path);
   const dirConfig = dirMap.get(dirPath);
   const requirePath = join(configDir, path);
   if (event === 'change' || event === 'unlink') {
@@ -67,6 +67,7 @@ function processDirConfig(event, path) {
       if (event !== 'addWithDir') {
         console.error('module change load/hot-reload error', path, e);
       }
+      return true;
     }
     Object.assign(dirConfig, newConfig); // update dirConfig
   }
