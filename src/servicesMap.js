@@ -13,6 +13,14 @@ const registry = {}; // form configs registry
 const configDir = `${process.env.CONFIG_DIR || Path.join(process.cwd(), 'services')}/`;
 let countDown = getFileCount(configDir);
 
+function setRegPosix(path, obj) {
+  registry[path] = obj;
+}
+function setRegWin32(path, obj) {
+  registry[path.replace(/\\/g, '/')] = obj;
+}
+const setReg = (Path.sep === '/') ? setRegPosix : setRegWin32;
+
 // load dir module first, the dir/config.js will replace dir module
 function processDir(event, path) {
   if (event !== 'addDir') return false;
@@ -37,7 +45,7 @@ function processDir(event, path) {
     enumerable: false,
   });
   dirMap.set(path, dirConfig);
-  registry[`/${path}/`] = dirConfig;
+  setReg(`/${path}/`, dirConfig);
   // eslint-disable-next-line no-use-before-define
   processDirConfig('addWithDir', Path.join(path, 'config.js'));
   return true;
@@ -97,7 +105,8 @@ function processConfigModule(event, path, purePath, parse, text) {
   } else {
     upDirSubMap[fileName] = data;
   }
-  registry[`/${purePath}`] = data;
+  setReg(`/${purePath}`, data);
+
   // validation
   if (upDirConfig && upDirConfig.validator) {
     try {
