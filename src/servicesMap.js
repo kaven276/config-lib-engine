@@ -1,6 +1,7 @@
 const chokidar = require('chokidar');
 const YAML = require('js-yaml');
 const fs = require('fs');
+const Path = require('path');
 const join = require('path').join;
 const loadMarkdown = require('./loadMarkdown.js');
 const json5 = require('json5');
@@ -110,12 +111,11 @@ function processConfigModule(event, path, purePath, parse, text) {
 
 function processConfigModuleTypes(event, path) {
   const requirePath = join(configDir, path);
-  const match = path.match(/^(.+)\.(yml|yaml|md|markdown|json|json5)$/);
-  if (!match) return false;
-  if (match[1].endsWith('README')) return false;
-  const pathPure = match[1];
-  const suffix = match[2];
-  // console.log(configName, suffix);
+  const suffix = Path.extname(path);
+  if (!suffix.match(/.(yml|yaml|md|markdown|json|json5)/)) return false;
+  const filename = Path.basename(path, suffix);
+  if (filename === 'README') return false;
+  const pathPure = Path.join(Path.dirname(path), filename);
   let text;
   switch (event) {
     case 'add': // 发现新配置文件
@@ -123,7 +123,7 @@ function processConfigModuleTypes(event, path) {
       text = fs.readFileSync(requirePath, {
         encoding: 'utf8',
       });
-      switch (suffix) {
+      switch (suffix.substr(1)) {
         case 'yml':
         case 'yaml':
           processConfigModule(event, path, pathPure, YAML.load, text);
