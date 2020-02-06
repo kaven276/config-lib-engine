@@ -165,7 +165,7 @@ chokidar
   .watch(configDir, {
     cwd: configDir,
     disableGlobbing: false,
-    depth: 1,
+    // depth: 5, // (default: undefined). If set, limits how many levels of subdirectories will be traversed
     awaitWriteFinish: true,
   })
   .on('all', (event, path) => {
