@@ -164,7 +164,7 @@ function processConfigModuleTypes(event, path) {
 chokidar
   .watch(configDir, {
     cwd: configDir,
-    disableGlobbing: false,
+    disableGlobbing: true, // (default: false) .watch() and .add() are treated as literal path names
     // depth: 5, // (default: undefined). If set, limits how many levels of subdirectories will be traversed
     awaitWriteFinish: true,
   })
