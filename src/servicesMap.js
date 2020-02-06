@@ -105,12 +105,12 @@ function processConfigModule(event, path, purePath, parse, text) {
   } else {
     upDirSubMap[fileName] = data;
   }
-  setReg(`/${purePath}`, data);
 
   // validation
+  let sanitizedData;
   if (upDirConfig && upDirConfig.validator) {
     try {
-      upDirConfig.validator(fileName, data)(data);
+      sanitizedData = upDirConfig.validator(fileName, data)(data);
     } catch (e) {
       console.error(`validate failed for /${path}`);
       // console.error(JSON.stringify(e, null, 2));
@@ -119,6 +119,7 @@ function processConfigModule(event, path, purePath, parse, text) {
       process.exit(1);
     }
   }
+  setReg(`/${purePath}`, sanitizedData || data);
 }
 
 function processConfigModuleTypes(event, path) {
