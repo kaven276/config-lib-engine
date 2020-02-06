@@ -189,6 +189,10 @@ chokidar
         }
       }
     }
+  }).on('ready', () => {
+    if (!module.parent.id.endsWith('server.js')) {
+      process.exit(0);
+    }
   });
 
 exports.configMap = registry;
